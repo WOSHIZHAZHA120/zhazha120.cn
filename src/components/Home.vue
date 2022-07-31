@@ -6,12 +6,8 @@ import Project_TOD from "../resources/images/Projects/TOD.png";
 import {ref} from "vue";
 import {NH2, NH4} from "naive-ui";
 
-const isMobile = ref();
-const reloadSize = () => isMobile.value = screen.width < 768;
-window.addEventListener('resize', reloadSize);
-reloadSize();
-
-const code_time_url = 'https://img.shields.io/endpoint?url=' + encodeURIComponent('https://codetime-api.datreks.com/badge/2270') + '&style=for-the-badge'
+const isMobile = ref(screen.width < 768);
+window.addEventListener('resize', () => isMobile.value = screen.width < 768);
 </script>
 
 <template>
@@ -23,7 +19,7 @@ const code_time_url = 'https://img.shields.io/endpoint?url=' + encodeURIComponen
           <n-h1>渣渣120</n-h1>
         </n-space>
 
-        <n-image :src="code_time_url"/>
+        <n-image preview-disabled :src="('https://img.shields.io/endpoint?url=' + encodeURIComponent('https://codetime-api.datreks.com/badge/2270') + '&style=for-the-badge')"/>
       </n-space>
 
       <n-divider/>
