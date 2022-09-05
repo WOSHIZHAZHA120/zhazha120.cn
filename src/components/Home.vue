@@ -140,13 +140,6 @@ window.addEventListener('resize', () => isMobile.value = screen.width < 768);
       </n-grid-item>
 
       <n-grid-item>
-        <n-a href="https://github.com/26F-Studio/Techmino">
-          <n-image preview-disabled :img-props="{ class: 'w-full' }"
-                   src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Techmino&theme=dark"/>
-        </n-a>
-      </n-grid-item>
-
-      <n-grid-item>
         <n-a href="https://github.com/26F-Studio/Techmino_Galaxy">
           <n-image preview-disabled :img-props="{ class: 'w-full' }"
                    src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Techmino_Galaxy&theme=dark"/>
@@ -154,9 +147,9 @@ window.addEventListener('resize', () => isMobile.value = screen.width < 768);
       </n-grid-item>
 
       <n-grid-item>
-        <n-a href="https://github.com/26F-Studio/Techluster">
+        <n-a href="https://github.com/26F-Studio/Techrater">
           <n-image preview-disabled :img-props="{ class: 'w-full' }"
-                   src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Techluster&theme=dark"/>
+                   src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Techrater&theme=dark"/>
         </n-a>
       </n-grid-item>
     </n-grid>
