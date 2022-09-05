@@ -140,16 +140,16 @@ window.addEventListener('resize', () => isMobile.value = screen.width < 768);
       </n-grid-item>
 
       <n-grid-item>
-        <n-a href="https://github.com/26F-Studio/Techmino_Galaxy">
+        <n-a href="https://github.com/26F-Studio/Techmino">
           <n-image preview-disabled :img-props="{ class: 'w-full' }"
-                   src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Techmino_Galaxy&theme=dark"/>
+                   src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Techmino&theme=dark"/>
         </n-a>
       </n-grid-item>
 
       <n-grid-item>
-        <n-a href="https://github.com/26F-Studio/Techrater">
+        <n-a href="https://github.com/26F-Studio/Quatrack">
           <n-image preview-disabled :img-props="{ class: 'w-full' }"
-                   src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Techrater&theme=dark"/>
+                   src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Quatrack&theme=dark"/>
         </n-a>
       </n-grid-item>
     </n-grid>
