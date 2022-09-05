@@ -140,20 +140,6 @@ window.addEventListener('resize', () => isMobile.value = screen.width < 768);
       </n-grid-item>
 
       <n-grid-item>
-        <n-a href="https://github.com/Geometry-Dash-Chinese/Geometry-Dash-Algorithm">
-          <n-image preview-disabled :img-props="{ class: 'w-full' }"
-              src="https://github-readme-stats.vercel.app/api/pin?username=Geometry-Dash-Chinese&repo=Geometry-Dash-Algorithm&theme=dark"/>
-        </n-a>
-      </n-grid-item>
-
-      <n-grid-item>
-        <n-a href="https://github.com/Geometry-Dash-Chinese/Geometry-Dash-Object">
-          <n-image preview-disabled :img-props="{ class: 'w-full' }"
-                   src="https://github-readme-stats.vercel.app/api/pin?username=Geometry-Dash-Chinese&repo=Geometry-Dash-Object&theme=dark"/>
-        </n-a>
-      </n-grid-item>
-
-      <n-grid-item>
         <n-a href="https://github.com/26F-Studio/Techmino">
           <n-image preview-disabled :img-props="{ class: 'w-full' }"
                    src="https://github-readme-stats.vercel.app/api/pin?username=26F-Studio&repo=Techmino&theme=dark"/>
