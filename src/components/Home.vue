@@ -15,7 +15,7 @@ window.addEventListener('resize', () => isMobile.value = screen.width < 768);
     <template #header>
       <n-space justify="space-between">
         <n-space>
-          <n-image :src="avatar" class="rounded-3xl" width="50"/>
+          <n-image :src="avatar" class="rounded-full" width="50"/>
           <n-h1>渣渣120</n-h1>
         </n-space>
 
@@ -48,7 +48,7 @@ window.addEventListener('resize', () => isMobile.value = screen.width < 768);
 
       <n-h4>
         <span>是 GDCN 服主, 全栈开发者, </span>
-        <n-text title="你知道的太多了" delete depth="3">以及深度福瑞控</n-text>
+        <n-text title="你知道的太多了" delete depth="3">Furry</n-text>
       </n-h4>
     </component>
 
