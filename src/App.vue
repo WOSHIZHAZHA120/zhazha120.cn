@@ -31,10 +31,6 @@ const options = [
         <n-loading-bar-provider>
           <n-notification-provider>
             <n-layout class="h-full">
-              <n-layout-header>
-                <n-menu :options="options" mode="horizontal"/>
-              </n-layout-header>
-
               <n-layout-content class="p-5 pb-32 lg:pb-20">
                 <router-view/>
               </n-layout-content>
