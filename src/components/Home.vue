@@ -46,10 +46,7 @@ window.addEventListener('resize', () => isMobile.value = screen.width < 768);
 
       <br>
 
-      <n-h4>
-        <span>是 GDCN 服主, 全栈开发者, </span>
-        <n-text title="你知道的太多了" delete depth="3">Furry</n-text>
-      </n-h4>
+      <n-h4>是 GDCN 服主, 或许是一个不合格的全栈开发者 (?)</n-h4>
     </component>
 
     <n-divider>作品</n-divider>
