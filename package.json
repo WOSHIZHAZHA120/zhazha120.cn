@@ -1,0 +1,27 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "nuxt dev",
+		"build": "nuxt build",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@iconify-json/devicon": "^1.1.35",
+		"@iconify-json/logos": "^1.1.42",
+		"@iconify-json/simple-icons": "^1.1.91",
+		"@unocss/nuxt": "^0.58.5",
+		"@vicons/antd": "^0.12.0",
+		"@vicons/tabler": "^0.12.0",
+		"naive-ui": "^2.37.3",
+		"nuxt": "^3.10.2",
+		"remeda": "^1.43.0",
+		"unocss": "^0.58.5",
+		"unplugin-auto-import": "^0.17.5",
+		"unplugin-vue-components": "^0.26.0",
+		"vue": "^3.4.19",
+		"vue-router": "^4.2.5"
+	}
+}

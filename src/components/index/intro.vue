@@ -1,0 +1,44 @@
+<script lang="ts" setup>
+import avatar from '~/assets/avatar_main.png'
+import { GITHUB_BASE_URL } from '~/core/shared'
+
+const current_in = ['26F-Studio', 'Geometry-Dash-Chinese']
+</script>
+
+<template>
+	<n-space vertical>
+		<n-space :size="0" align='center' vertical>
+			<n-image :src='avatar' class="avatar"/>
+			<n-text class='text-3xl font-bold'>渣渣120</n-text>
+		</n-space>
+
+		<div class="text-center">
+			<n-text class='text-2xl font-bold' type='info'>
+				也许是一名不合格的全栈开发者
+				<br>
+				喜欢自动化和新技术
+			</n-text>
+		</div>
+
+		<n-space :size="5" justify='center'>
+			<n-text>目前在</n-text>
+
+			<template v-for="(name, index) in current_in">
+				<n-button :href='(`${GITHUB_BASE_URL}/${name}`)' tag='a' text type='primary'>
+					{{ name.replaceAll('-', ' ') }}
+				</n-button>
+
+				<template v-if="index < current_in.length - 1">
+					<n-text>&</n-text>
+				</template>
+			</template>
+		</n-space>
+	</n-space>
+</template>
+
+<style scoped>
+.avatar {
+	@apply [&>img]:w-20 rounded-full;
+	@apply transition-(transform duration-1000) hover:rotate-[360deg];
+}
+</style>
