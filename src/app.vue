@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { darkTheme, dateZhCN, lightTheme, useOsTheme, zhCN } from 'naive-ui'
+import avatar from '~/assets/avatar_main.png'
 
 const osTheme = useOsTheme()
 const theme = computed(() => {
@@ -8,6 +9,15 @@ const theme = computed(() => {
 	}
 
 	return lightTheme
+})
+
+useHead({
+	link: [
+		{
+			rel: 'icon',
+			href: avatar
+		}
+	]
 })
 </script>
 
