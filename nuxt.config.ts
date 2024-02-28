@@ -7,6 +7,9 @@ export default defineNuxtConfig({
 	ssr: false,
 	srcDir: 'src',
 	app: {
+		head: {
+			title: '渣渣120'
+		},
 		pageTransition: {
 			name: 'page',
 			mode: 'out-in'
