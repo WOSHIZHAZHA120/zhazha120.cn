@@ -132,7 +132,7 @@ const passedDan = [
 
 		<template #footer>
 			<n-space align="center">
-				<n-text class="font-bold">活动</n-text>
+				<n-text class="fw-bold">活动</n-text>
 
 				<n-popover animated>
 					<template #trigger>
