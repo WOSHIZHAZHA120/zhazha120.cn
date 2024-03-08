@@ -18,15 +18,18 @@ definePageMeta({
 				<n-tab-pane name="爱发电 (推荐)">
 					<n-space vertical>
 						<div class="text-center">
-							<n-text strong type="info">需要注册账号, 介意的可以在上面切换成别的支付方式</n-text>
+							<n-text class="fw-bold" type="info">
+								需要注册账号, 介意的可以在上面切换成别的支付方式
+							</n-text>
 						</div>
 
 						<div class="relative">
 							<iframe class="border-none w-full h-[50vh]" src="https://afdian.net/@WOSHIZHAZHA120"/>
 
-							<div class="afdian-overlay">
-								<n-button :href="(`https://afdian.net/a/${OWNER_NAME}`)" size="large" strong tag="a"
-										  type="primary">
+							<div
+								class="absolute top-0 left-0 w-full h-full bg-(black opacity-80) opacity-0 hover:opacity-100 transition">
+								<n-button :href="(`https://afdian.net/a/${OWNER_NAME}`)" class="fw-bold" size="large"
+										  tag="a" type="primary">
 									<template #icon>
 										<n-icon :component="LinkOutlined"/>
 									</template>
@@ -60,12 +63,3 @@ definePageMeta({
 		</n-card>
 	</subpage>
 </template>
-
-<style scoped>
-.afdian-overlay {
-	@apply absolute top-0 left-0 w-full h-full;
-	@apply flex items-center justify-center;
-	@apply bg-(black opacity-80)
-	@apply transition opacity-0 hover:opacity-100
-}
-</style>
