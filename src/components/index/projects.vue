@@ -39,42 +39,40 @@ const projects = [
 </script>
 
 <template>
-	<div class="sm:w-4/5 mx-auto">
-		<n-grid :x-gap="10" :y-gap="10" cols='1 s:4' responsive='screen'>
-			<template v-for="project in projects">
-				<n-grid-item class="relative">
-					<n-image :src='project.preview'
-							 class='[&>img]:w-full transition-transform hover:scale-105'
-							 preview-disabled/>
+	<n-grid :x-gap="10" :y-gap="10" cols='1 s:4' responsive='screen'>
+		<template v-for="project in projects">
+			<n-grid-item class="relative">
+				<n-image :src='project.preview'
+						 class='[&>img]:w-full transition-transform hover:scale-105'
+						 preview-disabled/>
 
-					<div
-						class="absolute top-0 left-0 w-full h-full sm:(opacity-0 hover:opacity-100) bg-black bg-opacity-80 transition-opacity">
-						<div class="absolute top-1/2 left-1/2 -translate-1/2">
-							<n-flex vertical>
-								<div class="text-center">
-									<n-text class="fw-bold">{{ project.name }}</n-text>
-								</div>
+				<div
+					class="absolute top-0 left-0 w-full h-full sm:(opacity-0 hover:opacity-100) bg-black bg-opacity-80 transition-opacity">
+					<div class="absolute top-1/2 left-1/2 -translate-1/2">
+						<n-flex vertical>
+							<div class="text-center">
+								<n-text class="fw-bold">{{ project.name }}</n-text>
+							</div>
 
-								<n-button :src="project.website">
-									<template #icon>
-										<n-icon :component="LinkOutlined"/>
-									</template>
+							<n-button :src="project.website">
+								<template #icon>
+									<n-icon :component="LinkOutlined"/>
+								</template>
 
-									访问
-								</n-button>
+								访问
+							</n-button>
 
-								<n-button :href='(`${GITHUB_BASE_URL}/${project.owner}/${project.repository}`)' tag='a'>
-									<template #icon>
-										<n-icon :component="GithubOutlined"/>
-									</template>
+							<n-button :href='(`${GITHUB_BASE_URL}/${project.owner}/${project.repository}`)' tag='a'>
+								<template #icon>
+									<n-icon :component="GithubOutlined"/>
+								</template>
 
-									Github
-								</n-button>
-							</n-flex>
-						</div>
+								Github
+							</n-button>
+						</n-flex>
 					</div>
-				</n-grid-item>
-			</template>
-		</n-grid>
-	</div>
+				</div>
+			</n-grid-item>
+		</template>
+	</n-grid>
 </template>

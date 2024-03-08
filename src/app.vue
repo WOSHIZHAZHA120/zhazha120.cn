@@ -31,10 +31,8 @@ useHead({
 					<n-message-provider>
 						<n-notification-provider>
 							<n-layout position="absolute">
-								<n-layout-content position="absolute">
-									<div class="sm:(flex justify-center items-center h-full) <sm:(px-2 py-10)">
-										<NuxtPage/>
-									</div>
+								<n-layout-content class="container mx-auto">
+									<NuxtPage class="<sm:(px-2) py-10"/>
 								</n-layout-content>
 
 								<n-layout-footer position="absolute">
