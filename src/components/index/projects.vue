@@ -54,7 +54,7 @@ const projects = [
 								<n-text class="fw-bold">{{ project.name }}</n-text>
 							</div>
 
-							<n-button :src="project.website">
+							<n-button :href="project.website" tag="a">
 								<template #icon>
 									<n-icon :component="LinkOutlined"/>
 								</template>
