@@ -8,12 +8,13 @@ const current_in = ['26F-Studio', 'Geometry-Dash-Chinese']
 <template>
 	<n-space vertical>
 		<n-space :size="0" align='center' vertical>
-			<n-image :src='avatar' class="avatar"/>
-			<n-text class='text-3xl font-bold'>渣渣120</n-text>
+			<n-image :src='avatar'
+					 class="[&>img]:w-20 rounded-full transition-(transform duration-1000) hover:rotate-[360deg]"/>
+			<n-text class='text-3xl fw-bold'>渣渣120</n-text>
 		</n-space>
 
 		<div class="text-center">
-			<n-text class='text-2xl font-bold' type='info'>
+			<n-text class='text-2xl fw-bold' type='info'>
 				也许是一名不合格的全栈开发者
 				<br>
 				喜欢自动化和新技术
@@ -33,12 +34,10 @@ const current_in = ['26F-Studio', 'Geometry-Dash-Chinese']
 				</template>
 			</template>
 		</n-space>
+
+		<n-flex class="mb-2" justify="center">
+			<n-image
+				src="https://img.shields.io/endpoint?style=for-the-badge&url=https://api.codetime.dev/shield?id=2270"/>
+		</n-flex>
 	</n-space>
 </template>
-
-<style scoped>
-.avatar {
-	@apply [&>img]:w-20 rounded-full;
-	@apply transition-(transform duration-1000) hover:rotate-[360deg];
-}
-</style>
