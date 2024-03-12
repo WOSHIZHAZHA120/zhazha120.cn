@@ -1,29 +1,35 @@
 <script lang="ts" setup>
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import { pipe, sortBy } from 'remeda'
 
 const id = '5eb3a6530b29196c155074e8'
 
-const overlay_params = Object.entries({
-	username: id,
-	'display-name': true,
-	'display-level': true,
-	'display-role': true,
-	'display-badge': true,
-	'display-rank': true,
-	'display-league': true,
-	'display-sprint': true,
-	'display-blitz': true,
-	'display-standingsets': true,
-	'display-standingsets-sprint': true,
-	'display-standingsets-blitz': true,
-	alignment: 'middle',
-	layout: 'horizontal',
-	league: ['apm', 'pps', 'vs', 'x_winrate', 'percentile'].join('+'),
-	sprint: ['pieces', 'pps', 'ff', 'kpp', 'kps', 'quads'].join('+'),
-	blitz: ['pps', 'ff', 'spp', 'pieces', 'pieces', 'quads', 'tspins', 'allclears'].join('+')
-}).map(option => {
-	return option.join('=')
-}).join('&')
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const isMobile = breakpoints.smallerOrEqual('sm')
+
+const overlay_params = computed(() => {
+	return Object.entries({
+		username: id,
+		'display-name': true,
+		'display-level': true,
+		'display-role': true,
+		'display-badge': true,
+		'display-rank': true,
+		'display-league': true,
+		'display-sprint': true,
+		'display-blitz': true,
+		'display-standingsets': true,
+		'display-standingsets-sprint': true,
+		'display-standingsets-blitz': true,
+		alignment: 'top',
+		layout: isMobile.value ? 'vertical' : 'horizontal',
+		league: ['apm', 'pps', 'vs', 'x_winrate', 'percentile'].join('+'),
+		sprint: ['pieces', 'pps', 'ff', 'kpp', 'kps', 'quads'].join('+'),
+		blitz: ['pps', 'ff', 'spp', 'pieces', 'pieces', 'quads', 'tspins', 'allclears'].join('+')
+	}).map(option => {
+		return option.join('=')
+	}).join('&')
+})
 
 const records = {
 	'40l': [
@@ -132,8 +138,9 @@ const mergedRecords = pipe(
 			</n-button>
 		</template>
 
-		<n-element class='mx-auto hidden md:block'>
-			<iframe :src='(`https://tetr.fires.bz/overlay/user?${overlay_params}`)' class='border-none w-full h-80'/>
+		<n-element class='mx-auto'>
+			<iframe :src='(`https://tetr.fires.bz/overlay/user?${overlay_params}`)'
+					class='border-none w-full'/>
 		</n-element>
 
 		<n-element class='overflow-auto'>
@@ -148,6 +155,10 @@ const mergedRecords = pipe(
 
 		<template #action>
 			<n-flex align='center'>
+				<n-button href="https://cdn.zhazha120.cn/download/tetrio_background.png" tag="a">
+					下载我当前使用的 tetr.io 背景
+				</n-button>
+
 				<n-button href="https://cdn.zhazha120.cn/download/tetrio_config.ttc" tag="a">
 					下载我当前使用的 tetr.io 设置
 				</n-button>
