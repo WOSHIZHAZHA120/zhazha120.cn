@@ -147,7 +147,7 @@ const mergedRecords = pipe(
 		</n-element>
 
 		<template #action>
-			<n-space align='center'>
+			<n-flex align='center'>
 				<n-button href="https://cdn.zhazha120.cn/download/tetrio_config.ttc" tag="a">
 					下载我当前使用的 tetr.io 设置
 				</n-button>
@@ -155,7 +155,7 @@ const mergedRecords = pipe(
 				<n-button href="https://cdn.zhazha120.cn/download/tetrio_skin.tpse" tag="a">
 					下载我当前使用的 tetr.io 皮肤 (需要 tetr.io plus)
 				</n-button>
-			</n-space>
+			</n-flex>
 		</template>
 	</n-card>
 </template>

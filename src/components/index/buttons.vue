@@ -62,9 +62,9 @@ const buttons = [
 </script>
 
 <template>
-	<n-space justify="center" vertical>
+	<n-flex justify="center" vertical>
 		<template v-for="line in buttons">
-			<n-space justify='center'>
+			<n-flex justify='center'>
 				<template v-for="item in line">
 					<Component :is="item" v-if="isVNode(item)"/>
 
@@ -76,7 +76,7 @@ const buttons = [
 						{{ item.name }}
 					</n-button>
 				</template>
-			</n-space>
+			</n-flex>
 		</template>
-	</n-space>
+	</n-flex>
 </template>

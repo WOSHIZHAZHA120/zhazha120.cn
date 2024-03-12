@@ -16,7 +16,7 @@ definePageMeta({
 		<n-card size="small">
 			<n-tabs animated justify-content="center" type="line">
 				<n-tab-pane name="爱发电 (推荐)">
-					<n-space vertical>
+					<n-flex vertical>
 						<div class="text-center">
 							<n-text class="fw-bold" type="info">
 								需要注册账号, 介意的可以在上面切换成别的支付方式
@@ -38,26 +38,26 @@ definePageMeta({
 								</n-button>
 							</div>
 						</div>
-					</n-space>
+					</n-flex>
 				</n-tab-pane>
 
 				<n-tab-pane name="QQ">
-					<n-space justify="center">
+					<n-flex justify="center">
 						<n-image :src="QQPay" :width="500"/>
-					</n-space>
+					</n-flex>
 				</n-tab-pane>
 
 				<n-tab-pane name="微信">
-					<n-space justify="center">
+					<n-flex justify="center">
 						<n-image :src="WechatPay" :width="500"/>
-					</n-space>
+					</n-flex>
 				</n-tab-pane>
 
 				<n-tab-pane name="支付宝">
-					<n-space justify="center">
+					<n-flex justify="center">
 						<n-image :src="AliPayRedPacket" :width="500"/>
 						<n-image :src="AliPay" :width="500"/>
-					</n-space>
+					</n-flex>
 				</n-tab-pane>
 			</n-tabs>
 		</n-card>

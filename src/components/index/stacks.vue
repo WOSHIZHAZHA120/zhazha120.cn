@@ -163,7 +163,7 @@ const groupCount = Object.keys(groupedStacks).length
 		<template v-for="(items, type) in groupedStacks">
 			<n-grid-item>
 				<n-card :title="type" size="small">
-					<n-space align='center' size='small'>
+					<n-flex align='center' size='small'>
 						<template v-for="item in items">
 							<n-popover animated>
 								<template #trigger>
@@ -175,7 +175,7 @@ const groupCount = Object.keys(groupedStacks).length
 								{{ item.name }}
 							</n-popover>
 						</template>
-					</n-space>
+					</n-flex>
 				</n-card>
 			</n-grid-item>
 		</template>

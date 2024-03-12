@@ -6,9 +6,9 @@ definePageMeta({
 
 <template>
 	<subpage>
-		<n-space vertical>
+		<n-flex vertical>
 			<game-malody/>
 			<game-tetrio/>
-		</n-space>
+		</n-flex>
 	</subpage>
 </template>

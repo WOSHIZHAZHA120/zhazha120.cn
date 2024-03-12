@@ -1,5 +1,5 @@
 <template>
-	<n-space size='small' vertical>
+	<n-flex size='small' vertical>
 		<index-intro/>
 		<index-buttons/>
 
@@ -11,5 +11,5 @@
 
 		<n-divider>杂项</n-divider>
 		<index-misc/>
-	</n-space>
+	</n-flex>
 </template>

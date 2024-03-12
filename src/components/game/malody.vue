@@ -91,7 +91,7 @@ const passedDan = [
 			</n-button>
 		</template>
 
-		<n-space vertical>
+		<n-flex vertical>
 			<n-descriptions :columns='4' bordered class='text-center' label-align='center'>
 				<n-descriptions-item label='Jack'>
 					<n-text type='info'>{{ rank.jack }}</n-text>
@@ -128,10 +128,10 @@ const passedDan = [
 					</n-timeline>
 				</n-scrollbar>
 			</n-element>
-		</n-space>
+		</n-flex>
 
 		<template #footer>
-			<n-space align="center">
+			<n-flex align="center">
 				<n-text class="fw-bold">活动</n-text>
 
 				<n-popover animated>
@@ -141,7 +141,7 @@ const passedDan = [
 
 					Noob Team v2.5 头像
 				</n-popover>
-			</n-space>
+			</n-flex>
 		</template>
 
 		<template #action>

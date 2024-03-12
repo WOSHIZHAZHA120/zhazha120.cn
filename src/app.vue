@@ -36,14 +36,14 @@ useHead({
 								</n-layout-content>
 
 								<n-layout-footer position="absolute">
-									<n-space :size='0' justify='center'>
+									<n-flex :size='0' justify='center'>
 										<n-text>&copy; 2023 - {{ new Date().getFullYear() }}</n-text>
 										<n-divider vertical/>
 
 										<n-button href='https://beian.miit.gov.cn' tag='a' text>
 											赣ICP备2022005275号
 										</n-button>
-									</n-space>
+									</n-flex>
 								</n-layout-footer>
 							</n-layout>
 						</n-notification-provider>

@@ -3,7 +3,7 @@ import { DeviceGamepad } from '@vicons/tabler'
 </script>
 
 <template>
-	<n-space justify="center">
+	<n-flex justify="center">
 		<router-link v-slot="{ route, navigate }" to="/game">
 			<n-button tertiary @click="navigate">
 				<template #icon>
@@ -13,5 +13,5 @@ import { DeviceGamepad } from '@vicons/tabler'
 				{{ route.name }}
 			</n-button>
 		</router-link>
-	</n-space>
+	</n-flex>
 </template>

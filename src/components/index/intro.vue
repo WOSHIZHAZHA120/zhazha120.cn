@@ -6,12 +6,12 @@ const current_in = ['26F-Studio', 'Geometry-Dash-Chinese']
 </script>
 
 <template>
-	<n-space vertical>
-		<n-space :size="0" align='center' vertical>
+	<n-flex vertical>
+		<n-flex :size="0" align='center' vertical>
 			<n-image :src='avatar'
 					 class="[&>img]:w-20 rounded-full transition-(transform duration-1000) hover:rotate-[360deg]"/>
 			<n-text class='text-3xl fw-bold'>渣渣120</n-text>
-		</n-space>
+		</n-flex>
 
 		<div class="text-center">
 			<n-text class='text-2xl fw-bold' type='info'>
@@ -21,7 +21,7 @@ const current_in = ['26F-Studio', 'Geometry-Dash-Chinese']
 			</n-text>
 		</div>
 
-		<n-space :size="5" justify='center'>
+		<n-flex :size="5" justify='center'>
 			<n-text>目前在</n-text>
 
 			<template v-for="(name, index) in current_in">
@@ -33,11 +33,11 @@ const current_in = ['26F-Studio', 'Geometry-Dash-Chinese']
 					<n-text>&</n-text>
 				</template>
 			</template>
-		</n-space>
+		</n-flex>
 
 		<n-flex class="mb-2" justify="center">
 			<n-image
 				src="https://img.shields.io/endpoint?style=for-the-badge&url=https://api.codetime.dev/shield?id=2270"/>
 		</n-flex>
-	</n-space>
+	</n-flex>
 </template>
