@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { FileImageOutlined } from '@vicons/antd'
 import { DeviceGamepad } from '@vicons/tabler'
 </script>
 
@@ -8,6 +9,16 @@ import { DeviceGamepad } from '@vicons/tabler'
 			<n-button tertiary @click="navigate">
 				<template #icon>
 					<n-icon :component='DeviceGamepad'/>
+				</template>
+
+				{{ route.name }}
+			</n-button>
+		</router-link>
+
+		<router-link v-slot="{ route, navigate }" to="/gallery">
+			<n-button tertiary @click="navigate">
+				<template #icon>
+					<n-icon :component='FileImageOutlined'/>
 				</template>
 
 				{{ route.name }}
