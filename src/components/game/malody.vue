@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import avatar_noobteam_v2dot5 from '~/assets/avatar_noobteam_v2dot5.png'
 
 const rank = {
 	jack: ['Extra', 2].join(' '),
@@ -129,20 +128,6 @@ const passedDan = [
 				</n-scrollbar>
 			</n-element>
 		</n-flex>
-
-		<template #footer>
-			<n-flex align="center">
-				<n-text class="fw-bold">活动</n-text>
-
-				<n-popover animated>
-					<template #trigger>
-						<n-image :src="avatar_noobteam_v2dot5" class="[&>img]:w-20"/>
-					</template>
-
-					Noob Team v2.5 头像
-				</n-popover>
-			</n-flex>
-		</template>
 
 		<template #action>
 			<n-button href="https://cdn.zhazha120.cn/download/malody_skin.msz" tag="a">

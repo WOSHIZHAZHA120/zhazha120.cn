@@ -30,8 +30,8 @@ const imageWidth = 500
 							<div class="absolute top-0 left-0 w-full h-full">
 								<div class="w-full h-full transition-opacity opacity-0 hover:opacity-100">
 									<div class="w-full h-full bg-(black opacity-80)">
-										<n-flex justify="center" align="center" class="h-full">
-											<n-button href="https://afdian.net/a/WOSHIZHAZHA120" class="fw-bold"
+										<n-flex align="center" class="h-full" justify="center">
+											<n-button class="fw-bold" href="https://afdian.net/a/WOSHIZHAZHA120"
 													  size="large" tag="a" type="primary">
 												<template #icon>
 													<n-icon :component="LinkOutlined"/>
@@ -49,20 +49,20 @@ const imageWidth = 500
 
 				<n-tab-pane name="QQ">
 					<div class="text-center">
-						<n-image class="rounded" :src="QQPay" :width="imageWidth"/>
+						<n-image :src="QQPay" :width="imageWidth" class="rounded"/>
 					</div>
 				</n-tab-pane>
 
 				<n-tab-pane name="微信">
 					<div class="text-center">
-						<n-image class="rounded" :src="WechatPay" :width="imageWidth"/>
+						<n-image :src="WechatPay" :width="imageWidth" class="rounded"/>
 					</div>
 				</n-tab-pane>
 
 				<n-tab-pane name="支付宝">
-					<n-flex justify="center" align="top">
-						<n-image class="rounded-10" :src="AliPayRedPacket" :width="imageWidth"/>
-						<n-image class="rounded" :src="AliPay" :width="imageWidth"/>
+					<n-flex align="top" justify="center">
+						<n-image :src="AliPayRedPacket" :width="imageWidth" class="rounded-10"/>
+						<n-image :src="AliPay" :width="imageWidth" class="rounded"/>
 					</n-flex>
 				</n-tab-pane>
 			</n-tabs>

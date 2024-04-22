@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {GithubOutlined, LinkOutlined} from '@vicons/antd'
+import { GithubOutlined, LinkOutlined } from '@vicons/antd'
 import project_1 from '~/assets/project_1.png'
 import project_2 from '~/assets/project_2.png'
 import project_3 from '~/assets/project_3.png'
