@@ -7,6 +7,7 @@ definePageMeta({
 <template>
 	<subpage>
 		<n-flex vertical>
+			<game-osu-mania/>
 			<game-malody/>
 			<game-tetrio/>
 		</n-flex>
