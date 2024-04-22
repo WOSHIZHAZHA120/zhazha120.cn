@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import { GithubOutlined, LinkOutlined } from '@vicons/antd'
+import {GithubOutlined, LinkOutlined} from '@vicons/antd'
 import project_1 from '~/assets/project_1.png'
 import project_2 from '~/assets/project_2.png'
 import project_3 from '~/assets/project_3.png'
 import project_4 from '~/assets/project_4.png'
-import { GITHUB_BASE_URL } from '~/core/shared'
 
 const projects = [
 	{
@@ -62,7 +61,7 @@ const projects = [
 								访问
 							</n-button>
 
-							<n-button :href='(`${GITHUB_BASE_URL}/${project.owner}/${project.repository}`)' tag='a'>
+							<n-button :href='(`https://github.com/${project.owner}/${project.repository}`)' tag='a'>
 								<template #icon>
 									<n-icon :component="GithubOutlined"/>
 								</template>

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import avatar from '~/assets/avatar_main.png'
-import { GITHUB_BASE_URL } from '~/core/shared'
 
 const current_in = ['26F-Studio', 'Geometry-Dash-Chinese']
 </script>
@@ -25,7 +24,7 @@ const current_in = ['26F-Studio', 'Geometry-Dash-Chinese']
 			<n-text>目前在</n-text>
 
 			<template v-for="(name, index) in current_in">
-				<n-button :href='(`${GITHUB_BASE_URL}/${name}`)' tag='a' text type='primary'>
+				<n-button :href='(`https://github.com/${name}`)' tag='a' text type='primary'>
 					{{ name.replaceAll('-', ' ') }}
 				</n-button>
 

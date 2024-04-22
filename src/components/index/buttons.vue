@@ -9,7 +9,6 @@ import {
 } from '@vicons/antd'
 import { NButton, NIcon } from 'naive-ui'
 import { isVNode } from 'vue'
-import { GITHUB_BASE_URL, OWNER_NAME } from '~/core/shared'
 
 const supportPage = useLink({ to: '/support' })
 
@@ -23,7 +22,7 @@ const buttons = [
 		{
 			name: '邮箱',
 			icon: MailOutlined,
-			link: `mailto://${OWNER_NAME}@qq.com`
+			link: `mailto://WOSHIZHAZHA120@qq.com`
 		},
 		{
 			name: '哔哩哔哩',
@@ -35,7 +34,7 @@ const buttons = [
 		{
 			name: 'Github',
 			icon: GithubOutlined,
-			link: `${GITHUB_BASE_URL}/${OWNER_NAME}`
+			link: `https://github.com/WOSHIZHAZHA120`
 		}
 	],
 	[
