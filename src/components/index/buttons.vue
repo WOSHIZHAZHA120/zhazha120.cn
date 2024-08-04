@@ -1,16 +1,33 @@
 <script lang="ts" setup>
 import {
+	FileImageOutlined,
 	GithubOutlined,
 	HeartOutlined,
 	MailOutlined,
 	MonitorOutlined,
 	QqOutlined,
+	ToolOutlined,
 	UsergroupAddOutlined
 } from '@vicons/antd'
+import { DeviceGamepad } from '@vicons/tabler'
 import { NButton, NIcon } from 'naive-ui'
 import { isVNode } from 'vue'
 
-const supportPage = useLink({ to: '/support' })
+const supportPage = useLink({
+	to: '/support'
+})
+
+const galleryPage = useLink({
+	to: '/gallery'
+})
+
+const gamePage = useLink({
+	to: '/game'
+})
+
+const toolboxPage = useLink({
+	to: '/toolbox'
+})
 
 const buttons = [
 	[
@@ -55,6 +72,32 @@ const buttons = [
 				component: HeartOutlined
 			}),
 			default: () => supportPage.route.value.name
+		})
+	],
+	[
+		h(NButton, {
+			onClick: () => galleryPage.navigate()
+		}, {
+			icon: () => h(NIcon, {
+				component: FileImageOutlined
+			}),
+			default: () => galleryPage.route.value.name
+		}),
+		h(NButton, {
+			onClick: () => gamePage.navigate()
+		}, {
+			icon: () => h(NIcon, {
+				component: DeviceGamepad
+			}),
+			default: () => gamePage.route.value.name
+		}),
+		h(NButton, {
+			onClick: () => toolboxPage.navigate()
+		}, {
+			icon: () => h(NIcon, {
+				component: ToolOutlined
+			}),
+			default: () => toolboxPage.route.value.name
 		})
 	]
 ]
