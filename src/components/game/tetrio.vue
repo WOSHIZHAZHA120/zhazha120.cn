@@ -155,7 +155,7 @@ const mergedRecords = pipe(
 
 		<template #action>
 			<n-flex align='center'>
-				<n-button href="https://cdn.zhazha120.cn/download/tetrio_background.png" tag="a">
+				<n-button href="https://cdn.zhazha120.cn/download/tetrio_background.webp" tag="a">
 					下载我当前使用的 tetr.io 背景
 				</n-button>
 
