@@ -11,7 +11,7 @@ const pages = ref()
 tryOnMounted(() => {
 	pages.value = pipe(
 		Object.keys(
-			import.meta.glob(`@/pages/toolbox/**/*`)
+			import.meta.glob(`@/pages/toolbox/*/**`)
 		),
 		map(path => {
 			const destination = path.toString()
