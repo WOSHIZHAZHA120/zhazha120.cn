@@ -29,24 +29,26 @@ useHead({
 			<n-dialog-provider>
 				<n-loading-bar-provider>
 					<n-message-provider>
-						<n-notification-provider>
-							<n-layout position="absolute">
-								<n-layout-content class="container mx-auto">
-									<NuxtPage class="<sm:(px-2) py-10"/>
-								</n-layout-content>
+						<n-modal-provider>
+							<n-notification-provider>
+								<n-layout position="absolute">
+									<n-layout-content class="container mx-auto">
+										<NuxtPage class="<sm:(px-2) py-10"/>
+									</n-layout-content>
 
-								<n-layout-footer position="absolute">
-									<n-flex :size='0' justify='center'>
-										<n-text>&copy; 2023 - {{ new Date().getFullYear() }}</n-text>
-										<n-divider vertical/>
+									<n-layout-footer class="p-2" position="absolute">
+										<n-flex :size='0' justify='center'>
+											<n-text>&copy; 2023 - {{ new Date().getFullYear() }}</n-text>
+											<n-divider vertical/>
 
-										<n-button href='https://beian.miit.gov.cn' tag='a' text>
-											赣ICP备2022005275号
-										</n-button>
-									</n-flex>
-								</n-layout-footer>
-							</n-layout>
-						</n-notification-provider>
+											<n-button href='https://beian.miit.gov.cn' tag='a' text>
+												赣ICP备2022005275号
+											</n-button>
+										</n-flex>
+									</n-layout-footer>
+								</n-layout>
+							</n-notification-provider>
+						</n-modal-provider>
 					</n-message-provider>
 				</n-loading-bar-provider>
 			</n-dialog-provider>
