@@ -2,12 +2,18 @@
 import datasource from '@/assets/4k/keys.json'
 import { createReusableTemplate, tryOnMounted, useClipboard } from '@vueuse/core'
 import { type TreeSelectOption, useMessage } from 'naive-ui'
-import { isEmpty, isNonNullish, isNullish, last, reduce, sum } from 'remeda'
+import { isEmpty, isNonNullish, isNullish, sum } from 'remeda'
 
 definePageMeta({
 	name: 'acc 计算'
 })
 
+enum SelectableType {
+	DATABASE,
+	CUSTOM
+}
+
+const type = ref(SelectableType.DATABASE)
 const selected = ref()
 
 const options = computed(() => {
@@ -16,7 +22,7 @@ const options = computed(() => {
 	for (const data of datasource) {
 		const parts = data.name.split('.')
 
-		reduce(parts, (data, part) => {
+		parts.reduce((data, part) => {
 			const newKey = [data.lastKey, part]
 				.filter(part => {
 					return !isEmpty(part)
@@ -79,19 +85,57 @@ const options = computed(() => {
 	return result
 })
 
+const customData = ref({
+	name: SelectableType.CUSTOM,
+	keys: [],
+	require: 96
+})
+
 const data = computed(() => {
+	if (type.value === SelectableType.CUSTOM) {
+		return customData.value
+	}
+
 	return datasource.find(data => {
 		return data.name === selected.value
 	})
 })
 
+const totalKeys = computed(() => {
+	if (isNullish(data.value)) {
+		return 0
+	}
+
+	return sum<number[]>(data.value.keys)
+})
+
+const validKeysCount = computed(() => {
+	if (isNullish(data.value)) {
+		return 0
+	}
+
+	return data.value.keys.reduce(currentIndex => {
+		if (isNullish(data.value)) {
+			return currentIndex
+		}
+
+		const currentValue = data.value.keys[currentIndex]
+
+		if (isNonNullish(currentValue)) {
+			return currentIndex + 1
+		}
+
+		return currentIndex
+	}, 0)
+})
+
 const acc = ref([])
 
 const validAccCount = computed(() => {
-	return reduce(acc.value, currentIndex => {
+	return acc.value.reduce(currentIndex => {
 		const currentValue = acc.value[currentIndex]
 
-		if (isNonNullish(currentValue) && !isEmpty(currentValue)) {
+		if (isNonNullish(currentValue)) {
 			return currentIndex + 1
 		}
 
@@ -156,7 +200,7 @@ const copyResults = () => {
 const copyLink = () => {
 	const link = new URL('?_=' + btoa(
 		JSON.stringify({
-			name: selected.value,
+			data: data.value,
 			acc: acc.value
 		})
 	), location.href).toString()
@@ -179,35 +223,62 @@ tryOnMounted(() => {
 			const decodedValue = atob(encodedValue)
 			const data = JSON.parse(decodedValue)
 
-			selected.value = data.name
+			type.value = SelectableType.CUSTOM
+			customData.value = data.data
 			acc.value = data.acc
 		}
 	} catch (e) {
 
 	}
 })
+
+const handleCustomDataRemove = (index: number) => {
+	customData.value.keys = customData.value.keys.filter((_, i) => {
+		return i !== index
+	})
+}
 </script>
 
 <template>
 	<subpage>
 		<n-card>
 			<n-flex vertical>
-				<n-tree-select v-model:value="selected" :options="options" check-strategy="child" filterable show-path/>
+				<n-tabs v-model:value="type" justify-content="space-evenly" type="line">
+					<n-tab-pane :name="SelectableType.DATABASE" label="数据库">
+						<n-tree-select v-model:value="selected" :options="options" check-strategy="child" filterable
+									   show-path/>
+					</n-tab-pane>
 
-				<template v-if="isNonNullish(selected)">
+					<n-tab-pane :name="SelectableType.CUSTOM" label="自定义">
+						<n-flex vertical>
+							<n-form-item :show-feedback="false" label="键数据">
+								<n-dynamic-input v-slot="{ index }" v-model:value="customData.keys"
+												 @remove="handleCustomDataRemove">
+									<n-input-number v-model:value="customData.keys[index]" :min="1"
+													:placeholder="(`第 ${index+1} 首的物量`)" :step="1" class="w-full"/>
+								</n-dynamic-input>
+							</n-form-item>
+
+							<n-form-item :show-feedback="false" label="需要 (%)">
+								<n-slider v-model:value="customData.require" :max="100" :min="0" :step="1"/>
+							</n-form-item>
+						</n-flex>
+					</n-tab-pane>
+				</n-tabs>
+
+				<template
+					v-if="isNonNullish(selected) || (type === SelectableType.CUSTOM && validKeysCount > 0)">
 					<n-divider/>
 
 					<n-flex vertical>
 						<template v-if="isNonNullish(data)">
-							<n-grid :x-gap="10" :y-gap="10" cols="1 s:4" responsive="screen">
+							<n-grid :cols="(`1 s:${data.keys.length % 5}`)" :x-gap="10" :y-gap="10" responsive="screen">
 								<template v-for="(key, index) in data.keys">
 									<n-grid-item>
 										<n-flex :size="0" vertical>
-											<n-form-item :show-feedback="false" required>
-												<template #label>
-													<n-text>出第 {{ index + 1 }} 首歌时的 acc</n-text>
-												</template>
-
+											<n-form-item :label="(`出第 ${index + 1} 首歌时的 acc`)"
+														 :show-feedback="false"
+														 required>
 												<n-input-number v-model:value="acc[index]" :max="100" :min="0"
 																:step="0.01" class="w-full"/>
 											</n-form-item>
@@ -216,7 +287,7 @@ tryOnMounted(() => {
 												<n-text :depth="3">{{ key }}</n-text>
 
 												<n-text :depth="3">
-													({{ Number(key / sum(data.keys) * 100).toFixed(2) }}%)
+													({{ Number(key / totalKeys * 100).toFixed(2) }}%)
 												</n-text>
 											</n-flex>
 										</n-flex>
@@ -243,7 +314,7 @@ tryOnMounted(() => {
 								</ResultAlertDefine>
 
 								<template v-if="validAccCount >= data.keys.length">
-									<template v-if="last(acc)! >= data.require">
+									<template v-if="acc[validAccCount - 1] >= data.require">
 										<ResultAlert title="过了!" type="success"/>
 									</template>
 
@@ -253,9 +324,9 @@ tryOnMounted(() => {
 								</template>
 
 								<template v-else>
-									<template v-for="acc in results">
+									<template v-for="text in resultTexts">
 										<n-alert :show-icon="false" class="w-fit" size="small" type="info">
-											<n-text>{{ acc }}%</n-text>
+											<n-text>{{ text }}</n-text>
 										</n-alert>
 									</template>
 								</template>
