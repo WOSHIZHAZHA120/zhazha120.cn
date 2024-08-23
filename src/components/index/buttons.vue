@@ -9,7 +9,7 @@ import {
 	ToolOutlined,
 	UsergroupAddOutlined
 } from '@vicons/antd'
-import { DeviceGamepad } from '@vicons/tabler'
+import { DeviceGamepad, Paw } from '@vicons/tabler'
 import { NButton, NIcon } from 'naive-ui'
 import { isVNode } from 'vue'
 
@@ -23,6 +23,10 @@ const galleryPage = useLink({
 
 const gamePage = useLink({
 	to: '/game'
+})
+
+const furryPage = useLink({
+	to: '/furry'
 })
 
 const toolboxPage = useLink({
@@ -76,7 +80,9 @@ const buttons = [
 	],
 	[
 		h(NButton, {
-			onClick: () => galleryPage.navigate()
+			onClick: () => galleryPage.navigate(),
+			secondary: true,
+			type: 'primary'
 		}, {
 			icon: () => h(NIcon, {
 				component: FileImageOutlined
@@ -84,7 +90,9 @@ const buttons = [
 			default: () => galleryPage.route.value.name
 		}),
 		h(NButton, {
-			onClick: () => gamePage.navigate()
+			onClick: () => gamePage.navigate(),
+			secondary: true,
+			type: 'primary'
 		}, {
 			icon: () => h(NIcon, {
 				component: DeviceGamepad
@@ -92,7 +100,19 @@ const buttons = [
 			default: () => gamePage.route.value.name
 		}),
 		h(NButton, {
-			onClick: () => toolboxPage.navigate()
+			onClick: () => furryPage.navigate(),
+			secondary: true,
+			type: 'primary'
+		}, {
+			icon: () => h(NIcon, {
+				component: Paw
+			}),
+			default: () => furryPage.route.value.name
+		}),
+		h(NButton, {
+			onClick: () => toolboxPage.navigate(),
+			secondary: true,
+			type: 'primary'
 		}, {
 			icon: () => h(NIcon, {
 				component: ToolOutlined
