@@ -11,7 +11,7 @@
 		</template>
 
 		<div class="text-center">
-			<n-image src="https://osekai.net/profiles/img/banner.svg?id=16303789"/>
+			<n-image :img-props="{ class: 'w-full' }" src="https://osekai.net/profiles/img/banner.svg?id=16303789"/>
 		</div>
 	</n-card>
 </template>
