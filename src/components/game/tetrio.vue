@@ -64,6 +64,18 @@ const records = {
 		{
 			description: 'sub24',
 			date: '2023/9/21'
+		},
+		{
+			description: 'sub23',
+			date: '2024/3/6'
+		},
+		{
+			description: 'sub22',
+			date: '2024/6/5'
+		},
+		{
+			description: 'sub21.5',
+			date: '2024/8/5'
 		}
 	],
 	blitz: [
@@ -72,7 +84,7 @@ const records = {
 			date: '2023/8/19'
 		}
 	],
-	rank: [
+	s1_rank: [
 		{
 			name: 'A+',
 			date: '2022/4/30'
@@ -97,6 +109,36 @@ const records = {
 			name: 'X',
 			date: '2023/11/2'
 		}
+	],
+	s2_rank: [
+		{
+			name: 'A+',
+			date: '2024/8/17'
+		},
+		{
+			name: 'S-',
+			date: '2024/8/17'
+		},
+		{
+			name: 'S',
+			date: '2024/8/17'
+		},
+		{
+			name: 'S+',
+			date: '2024/8/17'
+		},
+		{
+			name: 'SS',
+			date: '2024/8/17'
+		},
+		{
+			name: 'U',
+			date: '2024/8/18'
+		},
+		{
+			name: 'X',
+			date: '2024/9/9'
+		}
 	]
 }
 
@@ -116,10 +158,17 @@ const mergedRecords = pipe(
 				type: 'warning'
 			}
 		}),
-		...records['rank'].map(record => {
+		...records['s1_rank'].map(record => {
 			return {
 				...record,
-				title: `Rank ${record.name}`,
+				title: `S1 Rank ${record.name}`,
+				type: 'success'
+			}
+		}),
+		...records['s2_rank'].map(record => {
+			return {
+				...record,
+				title: `S2 Rank ${record.name}`,
 				type: 'success'
 			}
 		})

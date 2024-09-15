@@ -1,12 +1,11 @@
 <script lang="ts" setup>
-import avatar from '~/assets/avatar_main.png'
+import avatar from '~/assets/avatar_main.webp'
 </script>
 
 <template>
 	<n-flex vertical>
 		<n-flex :size="0" align='center' vertical>
-			<n-image :src='avatar'
-					 class="[&>img]:w-20 rounded-full transition-(transform duration-1000) hover:rotate-[360deg]"/>
+			<n-image :img-props="{ class: 'w-20' }" :src='avatar' class="avatar"/>
 			<n-text class='text-3xl fw-bold'>渣渣120</n-text>
 		</n-flex>
 
@@ -19,8 +18,13 @@ import avatar from '~/assets/avatar_main.png'
 		</div>
 
 		<n-flex class="mb-2" justify="center">
-			<n-image
-				src="https://img.shields.io/endpoint?style=for-the-badge&url=https://api.codetime.dev/shield?id=2270"/>
+			<n-image src="https://img.shields.io/endpoint?style=for-the-badge&url=https://api.codetime.dev/shield?id=2270"/>
 		</n-flex>
 	</n-flex>
 </template>
+
+<style lang="scss" scoped>
+.avatar {
+	@apply rounded-full transition-(transform duration-1000) hover:rotate-[360deg];
+}
+</style>

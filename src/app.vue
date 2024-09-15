@@ -1,14 +1,17 @@
 <script lang="ts" setup>
 import { darkTheme, dateZhCN, lightTheme, useOsTheme, zhCN } from 'naive-ui'
-import avatar from '~/assets/avatar_main.png'
+import avatar from '~/assets/avatar_main.webp'
 
 const osTheme = useOsTheme()
 const theme = computed(() => {
-	if (osTheme.value === 'dark') {
-		return darkTheme
+	switch (osTheme.value) {
+		case 'light':
+			return lightTheme
+		case 'dark':
+			return darkTheme
+		default:
+			return null
 	}
-
-	return lightTheme
 })
 
 useHead({
@@ -37,12 +40,19 @@ useHead({
 									</n-layout-content>
 
 									<n-layout-footer class="p-2" position="absolute">
-										<n-flex :size='0' justify='center'>
+										<n-flex :size="0" align="center" vertical>
 											<n-text>&copy; 2023 - {{ new Date().getFullYear() }}</n-text>
-											<n-divider vertical/>
 
 											<n-button href='https://beian.miit.gov.cn' tag='a' text>
-												赣ICP备2022005275号
+												<n-text :depth="3" class="hover:text-current">
+													赣 ICP 备 2022005275 号
+												</n-text>
+											</n-button>
+
+											<n-button href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=36070202001088" tag="a" text>
+												<n-text :depth="3" class="hover:text-current">
+													赣公网安备 36070202001088 号
+												</n-text>
 											</n-button>
 										</n-flex>
 									</n-layout-footer>
@@ -56,14 +66,6 @@ useHead({
 	</NuxtLayout>
 </template>
 
-<style>
-.page-enter-active,
-.page-leave-active {
-	@apply transition-(all duration-300) ease-in-out;
-}
-
-.page-enter-from,
-.page-leave-to {
-	@apply opacity-0 blur;
-}
+<style lang="scss">
+@import '~/styles/transitions/page.scss';
 </style>

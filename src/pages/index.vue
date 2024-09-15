@@ -1,9 +1,25 @@
-<template>
-	<n-flex size='small' vertical>
-		<index-intro/>
-		<index-buttons/>
+<script lang="ts" setup>
+</script>
 
-		<n-divider>工具 & 技术栈</n-divider>
-		<index-stacks/>
-	</n-flex>
+<template>
+	<div class="screen-center">
+		<n-flex size='small' vertical>
+			<index-intro/>
+			<index-buttons/>
+
+			<n-divider>技术栈</n-divider>
+
+			<index-stacks/>
+		</n-flex>
+	</div>
 </template>
+
+<style lang="scss" scoped>
+.screen-center {
+	@apply flex justify-center items-center h-full;
+}
+
+.avatar {
+	@apply rounded-full transition-(transform duration-1s) hover:rotate-[360deg];
+}
+</style>

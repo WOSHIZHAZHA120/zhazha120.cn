@@ -5,7 +5,7 @@ import { type TreeSelectOption, useMessage } from 'naive-ui'
 import { isEmpty, isNonNullish, isNullish, sum } from 'remeda'
 
 definePageMeta({
-	name: 'acc 计算'
+	name: 'acc 计算器'
 })
 
 enum SelectableType {

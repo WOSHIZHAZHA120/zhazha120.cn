@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-import avatar_nanmandbteam_v1 from '~/assets/avatar_nanmandbteam_v1.png'
-import avatar_noobteam_v2dot5 from '~/assets/avatar_noobteam_v2dot5.png'
-import avatar_tetrisstudy_v1 from '~/assets/avatar_tetrisstudy_v1.png'
+import avatar_grandtourer_en from '~/assets/avatar_grandtourer_en.webp'
+import avatar_grandtourer_zh from '~/assets/avatar_grandtourer_zh.webp'
+import avatar_nanmandbteam_v1 from '~/assets/avatar_nanmandbteam_v1.webp'
+import avatar_noobteam_v2dot5 from '~/assets/avatar_noobteam_v2dot5.webp'
+import avatar_tetrisstudy_v1 from '~/assets/avatar_tetrisstudy_v1.webp'
 
 definePageMeta({
 	name: '画廊'
@@ -41,6 +43,28 @@ const imageWidth = 200
 							<n-button href="https://www.pixiv.net/artworks/105063844" tag="a" text type="primary">
 								pixiv#105063844
 							</n-button>
+						</template>
+					</gallery-avatar>
+
+					<gallery-avatar :src="avatar_grandtourer_en" name="Grand Tourer 英文">
+						<template #footer>
+							立绘来源:
+							<router-link #="{ href }" to="/furry">
+								<n-button :href="href" tag="a" text type="primary">
+									我家狗
+								</n-button>
+							</router-link>
+						</template>
+					</gallery-avatar>
+
+					<gallery-avatar :src="avatar_grandtourer_zh" name="Grand Tourer 中文">
+						<template #footer>
+							立绘来源:
+							<router-link #="{ href }" to="/furry">
+								<n-button :href="href" tag="a" text type="primary">
+									我家狗
+								</n-button>
+							</router-link>
 						</template>
 					</gallery-avatar>
 				</n-flex>

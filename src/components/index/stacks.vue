@@ -141,13 +141,13 @@ const stacks = [
 		website: 'https://postgresql.org'
 	},
 	{
-		type: '其他',
+		type: '运维',
 		name: 'Docker',
 		icon: 'i-devicon:docker',
 		website: 'https://docker.com'
 	},
 	{
-		type: '其他',
+		type: '运维',
 		name: 'Podman',
 		icon: 'i-devicon:podman',
 		website: 'https://podman.io'

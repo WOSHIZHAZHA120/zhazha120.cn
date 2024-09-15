@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 
 const rank = {
-	jack: ['Extra', 2].join(' '),
+	jack: ['Extra', 4].join(' '),
 	tech: ['Extra', 4].join(' '),
-	speed: ['Extra', 2].join(' '),
-	stream: ['Extra', 2].join(' '),
-	ln: '?'
+	speed: ['Extra', 4].join(' '),
+	stream: ['Extra', 5].join(' '),
+	ln: 3
 }
 
 const passedDan = [
@@ -78,6 +78,11 @@ const passedDan = [
 		name: 'Extra 3',
 		date: '2023/12/3',
 		video_id: 'BV1Lu4y1V7kW'
+	},
+	{
+		name: 'Extra 4',
+		date: '2024/9/4',
+		video_id: 'BV12opceAEZN'
 	}
 ]
 </script>

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { LinkOutlined } from '@vicons/antd'
-import AliPay from '~/assets/support_alipay.png'
-import AliPayRedPacket from '~/assets/support_alipay_redpacket.png'
-import QQPay from '~/assets/support_qqpay.png'
-import WechatPay from '~/assets/support_wechatpay.png'
+import AliPay from '~/assets/support_alipay.webp'
+import AliPayRedPacket from '~/assets/support_alipay_redpacket.webp'
+import QQPay from '~/assets/support_qqpay.webp'
+import WechatPay from '~/assets/support_wechatpay.webp'
 
 definePageMeta({
 	name: '赞助 & 支持'
@@ -25,14 +25,13 @@ const imageWidth = 500
 						</div>
 
 						<div class="relative">
-							<iframe class="w-full h-[50vh] border-none" src="https://afdian.net/@WOSHIZHAZHA120"/>
+							<iframe class="w-full h-[50vh] border-none" src="https://afdian.com/@WOSHIZHAZHA120"/>
 
 							<div class="absolute top-0 left-0 w-full h-full">
 								<div class="w-full h-full transition-opacity opacity-0 hover:opacity-100">
 									<div class="w-full h-full bg-(black opacity-80)">
 										<n-flex align="center" class="h-full" justify="center">
-											<n-button class="fw-bold" href="https://afdian.net/a/WOSHIZHAZHA120"
-													  size="large" tag="a" type="primary">
+											<n-button class="fw-bold" href="https://afdian.com/a/WOSHIZHAZHA120" size="large" tag="a" type="primary">
 												<template #icon>
 													<n-icon :component="LinkOutlined"/>
 												</template>
