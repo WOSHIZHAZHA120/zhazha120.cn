@@ -71,5 +71,5 @@ definePageMeta({
 </template>
 
 <style lang="scss">
-@import '~/styles/transitions/fade.scss';
+@import '~/styles/transitions/fade';
 </style>
