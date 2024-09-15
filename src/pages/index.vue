@@ -4,8 +4,15 @@
 <template>
 	<div class="screen-center">
 		<n-flex size='small' vertical>
+			<div class="h-10"/>
+
 			<index-intro/>
+
+			<div class="h-10"/>
+
 			<index-buttons/>
+
+			<div class="h-10"/>
 
 			<n-divider>技术栈</n-divider>
 
