@@ -1,70 +1,108 @@
 <script lang="ts" setup>
+import { createReusableTemplate } from '@vueuse/core'
 import _1 from '~/assets/furry/1.webp'
 import _2 from '~/assets/furry/2.webp'
 import _3 from '~/assets/furry/3.webp'
 import _4 from '~/assets/furry/4.webp'
 import _5 from '~/assets/furry/5.webp'
 import _6 from '~/assets/furry/6.webp'
+import ColorPickMode from '~/core/shared/enums/ColorPickMode'
+import isMobile from '~/core/shared/isMobile'
 
 definePageMeta({
 	name: '兽设'
 })
+
+const currentColorPickerMode = ref(ColorPickMode.HEX)
+const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 </script>
 
 <template>
 	<subpage>
 		<n-flex vertical>
 			<n-card>
-				<n-flex>
-					<n-image :img-props="{ class: 'h-90' }" :src="_6"/>
+				<n-flex justify="space-between">
+					<n-flex size="small">
+						<n-image :img-props="{ class: 'h-90' }" :src="_6"/>
 
-					<div>
-						<n-h2 class="my-0">这是一只小狗, 特点是腿部的闪电</n-h2>
-						<n-text>(待补充)</n-text>
-					</div>
+						<div>
+							<n-h3 class="my-0">赛博小狗</n-h3>
+							<n-text>其特点是腿部的闪电, 有蓝黄色的大以巴</n-text>
+						</div>
+					</n-flex>
+
+					<n-flex :align="(isMobile ? 'start' : 'end')" :class="(isMobile ? 'w-full' : 'h-90')" vertical>
+						<n-radio-group v-model:value="currentColorPickerMode" size="small">
+							<n-radio-button :value="ColorPickMode.RGB">RGB</n-radio-button>
+							<n-radio-button :value="ColorPickMode.HEX">HEX</n-radio-button>
+						</n-radio-group>
+
+						<ColorsDefine>
+							<furry-color :b="255" :g="255" :mode="currentColorPickerMode" :r="255"/>
+							<furry-color :b="255" :g="216" :mode="currentColorPickerMode" :r="0"/>
+							<furry-color :b="255" :g="131" :mode="currentColorPickerMode" :r="0"/>
+							<furry-color :b="0" :g="246" :mode="currentColorPickerMode" :r="255"/>
+							<furry-color :b="255" :g="224" :mode="currentColorPickerMode" :r="111"/>
+							<furry-color :b="0" :g="195" :mode="currentColorPickerMode" :r="255"/>
+						</ColorsDefine>
+
+						<template v-if="isMobile">
+							<div class="grid grid-cols-6 w-full h-10">
+								<Colors/>
+							</div>
+						</template>
+
+						<template v-else>
+							<div class="grid grid-rows-6 w-10 h-full">
+								<Colors/>
+							</div>
+						</template>
+					</n-flex>
 				</n-flex>
 			</n-card>
 
 			<n-card size="small" title="画廊">
-				<n-flex align="center">
-					<gallery-avatar :src="_1" name="无衣服">
-						<template #footer>
-							<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
-								🎨: 初晴沐雨
-							</n-button>
-						</template>
-					</gallery-avatar>
+				<div class="overflow-scroll">
+					<n-flex :wrap="false" align="center">
+						<gallery-image :src="_1" name="无衣服">
+							<template #footer>
+								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
+									🎨: 初晴沐雨
+								</n-button>
+							</template>
+						</gallery-image>
 
-					<gallery-avatar :src="_2" name="有衣服">
-						<template #footer>
-							<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
-								🎨: 初晴沐雨
-							</n-button>
-						</template>
-					</gallery-avatar>
+						<gallery-image :src="_2" name="有衣服">
+							<template #footer>
+								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
+									🎨: 初晴沐雨
+								</n-button>
+							</template>
+						</gallery-image>
 
-					<gallery-avatar :src="_3" name="双试图">
-						<template #footer>
-							<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
-								🎨: 初晴沐雨
-							</n-button>
-						</template>
-					</gallery-avatar>
+						<gallery-image :src="_3" name="双试图">
+							<template #footer>
+								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
+									🎨: 初晴沐雨
+								</n-button>
+							</template>
+						</gallery-image>
 
-					<gallery-avatar :src="_4" name="无偿">
-						<template #footer>
-							🎨: 诺辞
-						</template>
-					</gallery-avatar>
+						<gallery-image :src="_4" name="无偿">
+							<template #footer>
+								🎨: 诺辞
+							</template>
+						</gallery-image>
 
-					<gallery-avatar :src="_5" name="qq 兽速途">
-						<template #footer>
-							<n-button href="https://www.mihuashi.com/profiles/1806467" tag="a" text type="primary">
-								🎨: 小雷RAIN
-							</n-button>
-						</template>
-					</gallery-avatar>
-				</n-flex>
+						<gallery-image :src="_5" name="qq 兽速途">
+							<template #footer>
+								<n-button href="https://www.mihuashi.com/profiles/1806467" tag="a" text type="primary">
+									🎨: 小雷RAIN
+								</n-button>
+							</template>
+						</gallery-image>
+					</n-flex>
+				</div>
 			</n-card>
 		</n-flex>
 	</subpage>

@@ -1,11 +1,8 @@
 <script lang="ts" setup>
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import { pipe, sortBy } from 'remeda'
+import isMobile from '~/core/shared/isMobile'
 
 const id = '5eb3a6530b29196c155074e8'
-
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const isMobile = breakpoints.smallerOrEqual('sm')
 
 const overlay_params = computed(() => {
 	return Object.entries({
