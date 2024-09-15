@@ -36,7 +36,7 @@ useHead({
 							<n-notification-provider>
 								<n-layout position="absolute">
 									<n-layout-content class="container mx-auto">
-										<NuxtPage class="<sm:(px-2) py-10"/>
+										<NuxtPage class="<sm:(px-2) py-10 mb-26"/>
 									</n-layout-content>
 
 									<n-layout-footer class="p-2" position="absolute">
