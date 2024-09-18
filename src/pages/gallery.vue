@@ -9,7 +9,9 @@ definePageMeta({
 	name: '画廊'
 })
 
-const imageWidth = 200
+const furryPage = useLink({
+	to: '/furry'
+})
 </script>
 
 <template>
@@ -19,52 +21,58 @@ const imageWidth = 200
 				<n-text strong type="info">一些活动奖品 - 头像</n-text>
 
 				<n-flex align="center">
-					<gallery-image :src="avatar_noobteam_v2dot5" name="Noob Team V2.5">
+					<gallery-image :src="avatar_noobteam_v2dot5">
 						<template #footer>
-							立绘来源:
-							<n-button href="https://www.pixiv.net/artworks/113932174" tag="a" text type="primary">
-								pixiv#113932174
-							</n-button>
-						</template>
-					</gallery-image>
-
-					<gallery-image :src="avatar_nanmandbteam_v1" name="NanmanDB Team V1">
-						<template #footer>
-							立绘来源:
-							<n-button href="https://www.pixiv.net/artworks/105172613" tag="a" text type="primary">
-								pixiv#105172613
-							</n-button>
-						</template>
-					</gallery-image>
-
-					<gallery-image :src="avatar_tetrisstudy_v1" name="Tetris Study V1">
-						<template #footer>
-							立绘来源:
-							<n-button href="https://www.pixiv.net/artworks/105063844" tag="a" text type="primary">
-								pixiv#105063844
-							</n-button>
-						</template>
-					</gallery-image>
-
-					<gallery-image :src="avatar_grandtourer_en" name="Grand Tourer 英文">
-						<template #footer>
-							立绘来源:
-							<router-link #="{ href }" to="/furry">
-								<n-button :href="href" tag="a" text type="primary">
-									我家狗
+							<n-flex align="start" size="small" vertical>
+								<n-text>Noob Team V2.5</n-text>
+								<n-button href="https://www.pixiv.net/artworks/113932174" tag="a" text type="primary">
+									角色: pixiv#113932174
 								</n-button>
-							</router-link>
+							</n-flex>
 						</template>
 					</gallery-image>
 
-					<gallery-image :src="avatar_grandtourer_zh" name="Grand Tourer 中文">
+					<gallery-image :src="avatar_nanmandbteam_v1">
 						<template #footer>
-							立绘来源:
-							<router-link #="{ href }" to="/furry">
-								<n-button :href="href" tag="a" text type="primary">
-									我家狗
+							<n-flex align="start" size="small" vertical>
+								<n-text>NanmanDB Team V1</n-text>
+								<n-button href="https://www.pixiv.net/artworks/105172613" tag="a" text type="primary">
+									角色: pixiv#105172613
 								</n-button>
-							</router-link>
+							</n-flex>
+						</template>
+					</gallery-image>
+
+					<gallery-image :src="avatar_tetrisstudy_v1">
+						<template #footer>
+							<n-flex align="start" size="small" vertical>
+								<n-text>Tetris Study V1</n-text>
+								<n-button href="https://www.pixiv.net/artworks/105063844" tag="a" text type="primary">
+									角色: pixiv#105063844
+								</n-button>
+							</n-flex>
+						</template>
+					</gallery-image>
+
+					<gallery-image :src="avatar_grandtourer_en">
+						<template #footer>
+							<n-flex align="start" size="small" vertical>
+								<n-text>Grand Tourer 英文</n-text>
+								<n-button :href="furryPage.href" tag="a" text type="primary">
+									角色: 我家狗
+								</n-button>
+							</n-flex>
+						</template>
+					</gallery-image>
+
+					<gallery-image :src="avatar_grandtourer_zh">
+						<template #footer>
+							<n-flex align="start" size="small" vertical>
+								<n-text>Grand Tourer 中文</n-text>
+								<n-button :href="furryPage.href" tag="a" text type="primary">
+									角色: 我家狗
+								</n-button>
+							</n-flex>
 						</template>
 					</gallery-image>
 				</n-flex>

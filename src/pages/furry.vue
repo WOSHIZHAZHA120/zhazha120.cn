@@ -62,47 +62,62 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 			</n-card>
 
 			<n-card size="small" title="画廊">
-				<div class="overflow-scroll">
-					<n-flex :wrap="false" align="center">
-						<gallery-image :src="_1" name="无衣服">
-							<template #footer>
+				<n-flex>
+					<gallery-image :src="_1">
+						<template #footer>
+							<n-flex align="center" justify="space-between">
+								<n-text>无衣服</n-text>
 								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
-									🎨: 初晴沐雨
+									🎨 初晴沐雨
 								</n-button>
-							</template>
-						</gallery-image>
+							</n-flex>
+						</template>
+					</gallery-image>
 
-						<gallery-image :src="_2" name="有衣服">
-							<template #footer>
+					<gallery-image :src="_2">
+						<template #footer>
+							<n-flex align="center" justify="space-between">
+								<n-text>有衣服</n-text>
 								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
-									🎨: 初晴沐雨
+									🎨 初晴沐雨
 								</n-button>
-							</template>
-						</gallery-image>
+							</n-flex>
+						</template>
+					</gallery-image>
 
-						<gallery-image :src="_3" name="双试图">
-							<template #footer>
+					<gallery-image :src="_3">
+						<template #footer>
+							<n-flex align="center" justify="space-between">
+								<n-text>双试图</n-text>
 								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
-									🎨: 初晴沐雨
+									🎨 初晴沐雨
 								</n-button>
-							</template>
-						</gallery-image>
+							</n-flex>
+						</template>
+					</gallery-image>
 
-						<gallery-image :src="_4" name="无偿">
-							<template #footer>
-								🎨: 诺辞
-							</template>
-						</gallery-image>
+					<gallery-image :src="_4">
+						<template #footer>
+							<n-flex align="center" justify="space-between">
+								<n-text>无偿</n-text>
+								<n-button href="https://wpa.qq.com/msgrd?uin=257250992" tag="a" text type="primary">
+									🎨 诺辞
+								</n-button>
+							</n-flex>
+						</template>
+					</gallery-image>
 
-						<gallery-image :src="_5" name="qq 兽速途">
-							<template #footer>
+					<gallery-image :src="_5">
+						<template #footer>
+							<n-flex align="center" justify="space-between">
+								<n-text>qq 兽速途</n-text>
 								<n-button href="https://www.mihuashi.com/profiles/1806467" tag="a" text type="primary">
-									🎨: 小雷RAIN
+									🎨 小雷RAIN
 								</n-button>
-							</template>
-						</gallery-image>
-					</n-flex>
-				</div>
+							</n-flex>
+						</template>
+					</gallery-image>
+				</n-flex>
 			</n-card>
 		</n-flex>
 	</subpage>
