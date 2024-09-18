@@ -34,7 +34,7 @@ useHead({
 					<n-message-provider>
 						<n-modal-provider>
 							<n-notification-provider>
-								<n-layout position="absolute">
+								<n-layout :native-scrollbar="false" position="absolute">
 									<n-layout-content class="container mx-auto">
 										<NuxtPage class="<sm:(px-2) py-10 mb-26"/>
 									</n-layout-content>
