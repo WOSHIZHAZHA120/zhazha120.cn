@@ -22,7 +22,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 		<n-flex vertical>
 			<n-card>
 				<n-flex justify="space-between">
-					<n-flex size="small">
+					<n-flex :justify="(isMobile ? 'center' : 'start')" size="small">
 						<n-image :img-props="{ class: 'h-90' }" :src="_6"/>
 
 						<div>
@@ -31,7 +31,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 						</div>
 					</n-flex>
 
-					<n-flex :align="(isMobile ? 'start' : 'end')" :class="(isMobile ? 'w-full' : 'h-90')" vertical>
+					<n-flex :align="(isMobile ? 'start' : 'end')" :class="(isMobile ? 'w-full' : 'h-90')" :vertical="!isMobile" :wrap="!isMobile">
 						<n-radio-group v-model:value="currentColorPickerMode" size="small">
 							<n-radio-button :value="ColorPickMode.RGB">RGB</n-radio-button>
 							<n-radio-button :value="ColorPickMode.HEX">HEX</n-radio-button>
