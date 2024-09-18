@@ -88,7 +88,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 					<gallery-image :src="_3">
 						<template #footer>
 							<n-flex align="center" justify="space-between">
-								<n-text>双试图</n-text>
+								<n-text>双视图</n-text>
 								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
 									🎨 初晴沐雨
 								</n-button>
