@@ -110,7 +110,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 					<gallery-image :src="_5">
 						<template #footer>
 							<n-flex align="center" justify="space-between">
-								<n-text>qq 兽速途</n-text>
+								<n-button href="https://www.mihuashi.com/stalls/348580" tag="a" text type="primary">qq 兽速途</n-button>
 								<n-button href="https://www.mihuashi.com/profiles/1806467" tag="a" text type="primary">
 									🎨 小雷RAIN
 								</n-button>
