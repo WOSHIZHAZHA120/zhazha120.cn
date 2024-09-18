@@ -4,31 +4,17 @@ defineProps<{
 	readonly src: string
 	readonly name: string
 }>()
-
-const imageLoaded = ref(false)
-const componentMounted = ref(false)
-
-const handleImageLoad = async () => {
-	await nextTick(() => {
-		imageLoaded.value = true
-	})
-}
-
-onMounted(() => {
-	componentMounted.value = true
-})
 </script>
 
 <template>
-	<n-popover :show="imageLoaded && componentMounted" placement="bottom">
-		<template #trigger>
-			<n-image :src="src" :width="200" @load="handleImageLoad"/>
-		</template>
+	<n-flex :size="0" vertical>
+		<n-image :src="src" :width="200"/>
 
-		{{ name }}
-
-		<template #footer>
-			<slot name="footer"/>
-		</template>
-	</n-popover>
+		<n-card size="small">
+			<n-flex align="start" size="small" vertical>
+				<n-text>{{ name }}</n-text>
+				<slot name="footer"/>
+			</n-flex>
+		</n-card>
+	</n-flex>
 </template>
