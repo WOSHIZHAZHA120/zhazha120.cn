@@ -6,6 +6,7 @@ import _3 from '~/assets/furry/3.webp'
 import _4 from '~/assets/furry/4.webp'
 import _5 from '~/assets/furry/5.webp'
 import _6 from '~/assets/furry/6.webp'
+import _7 from '~/assets/furry/7.webp'
 import ColorPickMode from '~/core/shared/enums/ColorPickMode'
 import isMobile from '~/core/shared/isMobile'
 
@@ -113,6 +114,17 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 								<n-button href="https://www.mihuashi.com/stalls/348580" tag="a" text type="primary">qq 兽速途</n-button>
 								<n-button href="https://www.mihuashi.com/profiles/1806467" tag="a" text type="primary">
 									🎨 小雷RAIN
+								</n-button>
+							</n-flex>
+						</template>
+					</gallery-image>
+
+					<gallery-image :src="_7">
+						<template #footer>
+							<n-flex align="center" justify="space-between">
+								<n-button href="https://www.mihuashi.com/stalls/285040" tag="a" text type="primary">小全身qq兽立绘</n-button>
+								<n-button href="https://www.mihuashi.com/profiles/690783" tag="a" text type="primary">
+									🎨 w汪汪w
 								</n-button>
 							</n-flex>
 						</template>
