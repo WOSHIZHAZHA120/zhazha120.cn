@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import '~/core/clarity'
+
 import { darkTheme, dateZhCN, lightTheme, useOsTheme, zhCN } from 'naive-ui'
 import avatar from '~/assets/avatar_main.webp'
 
