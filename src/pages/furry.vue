@@ -7,6 +7,8 @@ import _4 from '~/assets/furry/4.webp'
 import _5 from '~/assets/furry/5.webp'
 import _6 from '~/assets/furry/6.webp'
 import _7 from '~/assets/furry/7.webp'
+import _8 from '~/assets/furry/8.webp'
+import _9 from '~/assets/furry/9.webp'
 import ColorPickMode from '~/core/shared/enums/ColorPickMode'
 import isMobile from '~/core/shared/isMobile'
 
@@ -27,7 +29,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 						<n-image :img-props="{ class: 'h-90' }" :src="_6"/>
 
 						<div>
-							<n-h3 class="my-0">赛博小狗</n-h3>
+							<n-h3 class="my-0">-</n-h3>
 							<n-text>其特点是腿部的闪电, 有蓝黄色的大以巴</n-text>
 						</div>
 					</n-flex>
@@ -63,10 +65,10 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 			</n-card>
 
 			<n-card size="small" title="画廊">
-				<n-flex>
+				<n-flex class="text-center">
 					<gallery-image :src="_1">
 						<template #footer>
-							<n-flex align="center" justify="space-between">
+							<n-flex vertical class="!gap-1">
 								<n-text>无衣服</n-text>
 								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
 									🎨 初晴沐雨
@@ -77,7 +79,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 
 					<gallery-image :src="_2">
 						<template #footer>
-							<n-flex align="center" justify="space-between">
+							<n-flex vertical class="!gap-1">
 								<n-text>有衣服</n-text>
 								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
 									🎨 初晴沐雨
@@ -88,7 +90,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 
 					<gallery-image :src="_3">
 						<template #footer>
-							<n-flex align="center" justify="space-between">
+							<n-flex vertical class="!gap-1">
 								<n-text>双视图</n-text>
 								<n-button href="https://space.bilibili.com/1981236068" tag="a" text type="primary">
 									🎨 初晴沐雨
@@ -99,7 +101,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 
 					<gallery-image :src="_4">
 						<template #footer>
-							<n-flex align="center" justify="space-between">
+							<n-flex vertical class="!gap-1">
 								<n-text>无偿</n-text>
 								<n-button href="https://wpa.qq.com/msgrd?uin=257250992" tag="a" text type="primary">
 									🎨 诺辞
@@ -110,7 +112,7 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 
 					<gallery-image :src="_5">
 						<template #footer>
-							<n-flex align="center" justify="space-between">
+							<n-flex vertical class="!gap-1">
 								<n-button href="https://www.mihuashi.com/stalls/348580" tag="a" text type="primary">qq 兽速途</n-button>
 								<n-button href="https://www.mihuashi.com/profiles/1806467" tag="a" text type="primary">
 									🎨 小雷RAIN
@@ -121,10 +123,32 @@ const { define: ColorsDefine, reuse: Colors } = createReusableTemplate()
 
 					<gallery-image :src="_7">
 						<template #footer>
-							<n-flex align="center" justify="space-between">
+							<n-flex vertical class="!gap-1">
 								<n-button href="https://www.mihuashi.com/stalls/285040" tag="a" text type="primary">小全身qq兽立绘</n-button>
 								<n-button href="https://www.mihuashi.com/profiles/690783" tag="a" text type="primary">
 									🎨 w汪汪w
+								</n-button>
+							</n-flex>
+						</template>
+					</gallery-image>
+
+					<gallery-image :src="_8">
+						<template #footer>
+							<n-flex vertical class="!gap-1">
+								<n-button href="https://www.mihuashi.com/stalls/285040" tag="a" text type="primary">来一口场景插Q</n-button>
+								<n-button href="https://www.mihuashi.com/profiles/784185" tag="a" text type="primary">
+									🎨 云栖啾啾鸣
+								</n-button>
+							</n-flex>
+						</template>
+					</gallery-image>
+
+					<gallery-image :src="_9">
+						<template #footer>
+							<n-flex vertical class="!gap-1">
+								<n-text>双视图</n-text>
+								<n-button href="https://space.bilibili.com/74108379" tag="a" text type="primary">
+									🎨 令詟
 								</n-button>
 							</n-flex>
 						</template>
