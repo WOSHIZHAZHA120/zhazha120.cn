@@ -2,7 +2,9 @@ import { defineConfig, presetIcons, presetUno, presetWebFonts, transformerCompil
 
 export default defineConfig({
 	presets: [
-		presetUno(),
+		presetUno({
+			dark: 'media'
+		}),
 		presetIcons(),
 		presetWebFonts({
 			provider: 'none',
