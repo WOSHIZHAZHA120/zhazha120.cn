@@ -1,14 +1,26 @@
 <script lang="ts" setup>
 import '~/styles/utils.scss'
+import '~/styles/transitions/scale.scss'
+import { tryOnMounted } from '@vueuse/core'
+
+const loaded = ref(false)
+
+tryOnMounted(async () => {
+	await nextTick(() => {
+		loaded.value = true
+	})
+})
 </script>
 
 <template>
 	<div class="screen-center">
-		<div class="flex flex-col gap-2">
-			<index-pages-1-fragment/>
-			<index-pages-1-intro/>
-			<index-pages-1-codetime/>
-			<index-pages-1-buttons/>
-		</div>
+		<Transition appear mode="out-in" name="scale">
+			<div v-if="loaded" class="flex flex-col gap-2">
+				<index-pages-1-fragment/>
+				<index-pages-1-intro/>
+				<index-pages-1-codetime/>
+				<index-pages-1-buttons/>
+			</div>
+		</Transition>
 	</div>
 </template>

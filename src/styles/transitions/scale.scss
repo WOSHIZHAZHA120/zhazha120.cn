@@ -1,0 +1,14 @@
+.scale {
+  &-enter-active,
+  &-leave-active {
+    @apply transition-(scale duration-500 linear);
+  }
+
+  &-enter-from {
+    @apply scale-0;
+  }
+
+  &-leave-to {
+    @apply scale-100;
+  }
+}
