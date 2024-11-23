@@ -1,5 +1,5 @@
 <template>
-	<div class="flex <sm:(flex-col) gap-5">
+	<div class="flex flex-wrap <sm:(flex-col) gap-5">
 		<div class="flex-1">
 			<Panel header="有用的链接">
 				<div class="flex <sm:(flex-col) gap-2">
@@ -61,7 +61,17 @@
 				</div>
 			</Panel>
 		</div>
+
+		<div class="w-full">
+			<Panel header="关于此网站">
+				<div class="flex <sm:(flex-col) gap-2">
+					<Button as="a" class="<sm:(w-full) no-underline" href="https://github.com/WOSHIZHAZHA120/zhazha120.cn" label="源代码" severity="secondary" size="small">
+						<template #icon>
+							<div class="i-simple-icons:github"/>
+						</template>
+					</Button>
+				</div>
+			</Panel>
+		</div>
 	</div>
 </template>
-<script lang="ts" setup>
-</script>
