@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import '~/styles/utils.scss'
 import '~/styles/transitions/scale.scss'
+
 import { tryOnMounted } from '@vueuse/core'
 
 const loaded = ref(false)
