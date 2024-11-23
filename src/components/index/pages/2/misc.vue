@@ -22,6 +22,24 @@
 							</template>
 						</Button>
 					</router-link>
+
+					<Button v-tooltip.top="('翻新中')" class="<sm:(w-full) no-underline" disabled label="画廊" severity="secondary" size="small">
+						<template #icon>
+							<div class="i-ant-design:file-image-outlined"/>
+						</template>
+					</Button>
+
+					<Button v-tooltip.top="('翻新中')" class="<sm:(w-full) no-underline" disabled label="游戏" severity="secondary" size="small">
+						<template #icon>
+							<div class="i-tabler:device-gamepad"/>
+						</template>
+					</Button>
+
+					<Button v-tooltip.top="('翻新中')" class="<sm:(w-full) no-underline" disabled label="兽设" severity="secondary" size="small">
+						<template #icon>
+							<div class="i-tabler:paw"/>
+						</template>
+					</Button>
 				</div>
 			</Panel>
 		</div>
@@ -29,9 +47,21 @@
 		<div class="flex-1">
 			<Panel header="在线工具">
 				<div class="flex <sm:(flex-col) gap-2">
+					<Button v-tooltip.top="('翻新中')" class="<sm:(w-full) no-underline" disabled label="图片水印工具" severity="secondary" size="small">
+						<template #icon>
+							<div class="i-tabler:image-in-picture"/>
+						</template>
+					</Button>
 
+					<Button v-tooltip.top="('翻新中')" class="<sm:(w-full) no-underline" disabled label="acc 计算器" severity="secondary" size="small">
+						<template #icon>
+							<div class="i-ant-design:calculator-outlined"/>
+						</template>
+					</Button>
 				</div>
 			</Panel>
 		</div>
 	</div>
 </template>
+<script lang="ts" setup>
+</script>
