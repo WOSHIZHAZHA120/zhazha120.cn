@@ -14,7 +14,7 @@ tryOnMounted(async () => {
 </script>
 
 <template>
-	<div class="screen-center">
+	<div class="screen-center-flex">
 		<Transition appear mode="out-in" name="scale">
 			<div v-if="loaded" class="flex flex-col gap-2">
 				<index-pages-1-fragment/>
