@@ -10,7 +10,8 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'@unocss/nuxt',
-		'@primevue/nuxt-module'
+		'@primevue/nuxt-module',
+		'@nuxt/scripts'
 	],
 	primevue: {
 		options: {
