@@ -13,6 +13,7 @@
 		"@unocss/nuxt": "^0.64.1",
 		"@vueuse/core": "^11.3.0",
 		"nuxt": "^3.14.1592",
+		"remeda": "^2.17.3",
 		"sass-embedded": "^1.81.0",
 		"unocss": "^0.64.1",
 		"vue": "^3.5.13",
