@@ -1,0 +1,8 @@
+.screen-center {
+  @apply position-(absolute left-1/2 top-1/2) transform-(& -translate-1/2);
+}
+
+.icon-btn {
+  @apply text-6;
+  @apply transition-(opacity duration-150) hover:(opacity-60);
+}
