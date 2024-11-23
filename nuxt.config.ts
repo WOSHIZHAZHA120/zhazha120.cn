@@ -8,6 +8,18 @@ export default defineNuxtConfig({
 	devtools: {
 		enabled: true
 	},
+	app: {
+		head: {
+			title: '渣渣120'
+		}
+	},
+	scripts: {
+		registry: {
+			clarity: {
+				id: 'oegssgxsei'
+			}
+		}
+	},
 	modules: [
 		'@unocss/nuxt',
 		'@primevue/nuxt-module',
