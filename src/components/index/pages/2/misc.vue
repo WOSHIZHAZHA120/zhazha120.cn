@@ -14,6 +14,14 @@
 							<div class="i-ant-design:usergroup-add-outlined"/>
 						</template>
 					</Button>
+
+					<router-link v-slot="{ route }" to="/support">
+						<Button :href="route.href" :label="String(route.name)" as="a" class="<sm:(w-full) no-underline" severity="secondary" size="small">
+							<template #icon>
+								<div class="i-ant-design:heart-outlined"/>
+							</template>
+						</Button>
+					</router-link>
 				</div>
 			</Panel>
 		</div>
