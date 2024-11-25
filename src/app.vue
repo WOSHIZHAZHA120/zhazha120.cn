@@ -7,7 +7,7 @@ import isMobile from '~/core/shared/isMobile'
 	<NuxtLayout>
 		<NuxtLoadingIndicator/>
 
-		<div class="container mx-auto">
+		<div :class="{ 'px-2': isMobile }" class="container mx-auto">
 			<NuxtPage/>
 		</div>
 
