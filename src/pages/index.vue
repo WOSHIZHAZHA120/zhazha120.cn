@@ -18,7 +18,7 @@ const goDown = () => {
 
 <template>
 	<div ref="container" class="flex flex-col">
-		<div :style="{ height: `${minHeight}px` }">
+		<div :style="{ 'min-height': `${minHeight}px` }" class="relative">
 			<index-pages-1/>
 
 			<div class="absolute left-1/2 bottom-20 -translate-x-1/2">
@@ -30,7 +30,7 @@ const goDown = () => {
 			</div>
 		</div>
 
-		<div ref="page2_container" :style="{ height: 'calc(100vh - 3rem)' }">
+		<div ref="page2_container" :style="{ 'min-height': 'calc(100vh - 3rem)' }">
 			<index-pages-2/>
 		</div>
 	</div>
