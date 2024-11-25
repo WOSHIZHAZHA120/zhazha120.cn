@@ -6,7 +6,7 @@ import isMobile from '~/core/shared/isMobile'
 <template>
 	<div class="flex flex-wrap gap-2">
 		<template v-for="project in projects">
-			<div class="sm:flex-1">
+			<div :class="[isMobile ? 'w-full' : 'flex-1']">
 				<Panel :header="project.name">
 					<div class="flex flex-col gap-2">
 						<Image :src="project.preview_image" alt="预览" image-class="w-full" preview/>

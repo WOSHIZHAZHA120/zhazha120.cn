@@ -14,7 +14,7 @@ const groupedStacks = pipe(
 <template>
 	<div class="flex flex-wrap gap-2">
 		<template v-for="(items, type) in groupedStacks">
-			<div class="sm:flex-1">
+			<div :class="[isMobile ? 'w-full' : 'flex-1']">
 				<Panel :header="type">
 					<div class="flex gap-2">
 						<template v-for="item in items">
