@@ -1,26 +1,30 @@
+<script lang="ts" setup>
+import isMobile from '~/core/shared/isMobile'
+</script>
+
 <template>
-	<div class="flex flex-wrap <sm:(justify-evenly) items-center gap-2">
-		<Button as="a" class="<sm:(w-full) no-underline" href="https://wpa.qq.com/msgrd?v=3&uin=2331281251" label="QQ" severity="secondary">
+	<div class="flex flex-wrap gap-2">
+		<Button :dt="{ padding: 0 }" :fluid="isMobile" as="a" href="https://wpa.qq.com/msgrd?v=3&uin=2331281251" label="QQ" severity="secondary" size="small">
 			<template #icon>
-				<div class="icon-btn i-simple-icons:tencentqq"/>
+				<div class="i-simple-icons:tencentqq"/>
 			</template>
 		</Button>
 
-		<Button as="a" class="<sm:(w-full) no-underline" href="mailto://WOSHIZHAZHA120@qq.com" label="邮箱" severity="secondary">
+		<Button :dt="{ padding: 0 }" :fluid="isMobile" as="a" href="mailto://WOSHIZHAZHA120@qq.com" label="邮箱" severity="secondary" size="small">
 			<template #icon>
-				<div class="icon-btn i-simple-icons:maildotru"/>
+				<div class="i-simple-icons:maildotru"/>
 			</template>
 		</Button>
 
-		<Button as="a" class="<sm:(w-full) no-underline" href="https://space.bilibili.com/24267334" label="哔哩哔哩" severity="secondary">
+		<Button :dt="{ padding: 0 }" :fluid="isMobile" as="a" href="https://space.bilibili.com/24267334" label="哔哩哔哩" severity="secondary" size="small">
 			<template #icon>
-				<div class="icon-btn i-simple-icons:bilibili"/>
+				<div class="i-simple-icons:bilibili"/>
 			</template>
 		</Button>
 
-		<Button as="a" class="<sm:(w-full) no-underline" href="https://github.com/WOSHIZHAZHA120" label="Github" severity="secondary">
+		<Button :dt="{ padding: 0 }" :fluid="isMobile" as="a" href="https://github.com/WOSHIZHAZHA120" label="Github" severity="secondary" size="small">
 			<template #icon>
-				<div class="icon-btn i-simple-icons:github"/>
+				<div class="i-simple-icons:github"/>
 			</template>
 		</Button>
 	</div>

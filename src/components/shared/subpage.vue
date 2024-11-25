@@ -1,10 +1,12 @@
 <script lang="ts" setup>
-defineProps<{
-	readonly title?: string
-}>()
+import { isNullish } from 'remeda'
 
 const route = useRoute()
 const router = useRouter()
+
+const props = defineProps<{
+	readonly title?: string
+}>()
 
 const handleBack = () => {
 	if (history.length <= 1) {
@@ -14,24 +16,34 @@ const handleBack = () => {
 
 	router.back()
 }
+
+const title = computed(() => {
+	if (isNullish(props.title)) {
+		return route.name
+	}
+
+	return props.title
+})
 </script>
 
 <template>
-	<div class="pt-5 flex flex-col gap-2">
-		<Toolbar>
-			<template #start>
-				<Button as="a" class="no-underline !p-0" href="javascript:" label="返回" link severity="secondary" @click="handleBack">
-					<template #icon>
-						<div class="i-ant-design:left-outlined"/>
-					</template>
-				</Button>
-			</template>
+	<div class="pt-2">
+		<div class="flex flex-col gap-2">
+			<Toolbar :dt="{ padding: 0 }">
+				<template #start>
+					<Button label="返回" severity="secondary" size="small" variant="link" @click="handleBack">
+						<template #icon>
+							<div class="i-ant-design:left-outlined"/>
+						</template>
+					</Button>
+				</template>
 
-			<template #center>
-				{{ title ?? route.name }}
-			</template>
-		</Toolbar>
+				<template #center>
+					{{ title }}
+				</template>
+			</Toolbar>
 
-		<slot/>
+			<slot/>
+		</div>
 	</div>
 </template>

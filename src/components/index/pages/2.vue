@@ -1,5 +1,5 @@
 <template>
-	<div class="<sm:(px-2) flex flex-col">
+	<div class="flex flex-col">
 		<Divider>我会这些</Divider>
 		<index-pages-2-stacks/>
 

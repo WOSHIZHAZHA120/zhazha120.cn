@@ -1,14 +1,14 @@
 .scale {
-  &-enter-active,
-  &-leave-active {
-    @apply transition-(scale duration-500 linear);
-  }
+	&-enter-active,
+	&-leave-active {
+		@apply transition-all duration-500 ease-linear;
+	}
 
-  &-enter-from {
-    @apply scale-0;
-  }
+	&-enter-from {
+		@apply scale-0;
+	}
 
-  &-leave-to {
-    @apply scale-100;
-  }
+	&-leave-to {
+		@apply scale-100;
+	}
 }

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { groupBy, pipe, prop } from 'remeda'
-import stacks from '~/core/shared/stacks'
+import stacks from '~/core/shared/data/stacks'
+import isMobile from '~/core/shared/isMobile'
 
 const groupedStacks = pipe(
 	stacks,
@@ -11,14 +12,14 @@ const groupedStacks = pipe(
 </script>
 
 <template>
-	<div class="flex <sm:(flex-col) gap-5">
+	<div class="flex flex-wrap gap-2">
 		<template v-for="(items, type) in groupedStacks">
-			<div class="flex-1">
+			<div class="sm:flex-1">
 				<Panel :header="type">
 					<div class="flex gap-2">
 						<template v-for="item in items">
-							<Button v-tooltip.top="item.name" :href='item.website' as="a" class="!p-0" link>
-								<div :class="(`icon-btn ${item.icon}`)"/>
+							<Button v-tooltip.top="item.name" :dt="{ 'sm.font-size': '1.5rem', 'sm.padding.x': 0, 'sm.padding.y': 0 }" :fluid="isMobile" :href='item.website' as="a" size="small" variant="link">
+								<div :class="item.icon"/>
 							</Button>
 						</template>
 					</div>
