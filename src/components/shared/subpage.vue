@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { isNullish } from 'remeda'
+import isMobile from '~/core/shared/isMobile'
 
 const route = useRoute()
 const router = useRouter()
@@ -24,6 +25,15 @@ const title = computed(() => {
 
 	return props.title
 })
+
+const titleSlot = computed(() => {
+	if (isMobile.value) {
+		return 'end'
+	}
+
+	return 'center'
+
+})
 </script>
 
 <template>
@@ -38,8 +48,10 @@ const title = computed(() => {
 					</Button>
 				</template>
 
-				<template #center>
-					{{ title }}
+				<template #[titleSlot]>
+					<div :class="{ 'mr-2': isMobile }">
+						<span>{{ title }}</span>
+					</div>
 				</template>
 			</Toolbar>
 
