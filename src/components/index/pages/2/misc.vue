@@ -4,6 +4,10 @@ import isMobile from '~/core/shared/isMobile'
 const supportPage = useLink({
 	to: '/support'
 })
+
+const furryPage = useLink({
+	to: '/furry'
+})
 </script>
 
 <template>
@@ -41,7 +45,7 @@ const supportPage = useLink({
 						</template>
 					</Button>
 
-					<Button v-tooltip.top="('翻新中')" :fluid="isMobile" disabled label="兽设" severity="secondary" size="small">
+					<Button :fluid="isMobile" :href="furryPage.href.value" :label="String(furryPage.route.value.name)" as="a" severity="secondary" size="small">
 						<template #icon>
 							<div class="i-tabler:paw"/>
 						</template>
