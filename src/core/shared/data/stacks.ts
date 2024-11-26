@@ -1,4 +1,4 @@
-import type { Stack } from '~/types/shared'
+import type Stack from '~/types/stack'
 
 // @unocss-include
 
