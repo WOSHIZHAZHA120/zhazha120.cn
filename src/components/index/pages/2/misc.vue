@@ -5,6 +5,10 @@ const supportPage = useLink({
 	to: '/support'
 })
 
+const gamePage = useLink({
+	to: '/game'
+})
+
 const furryPage = useLink({
 	to: '/furry'
 })
@@ -33,7 +37,7 @@ const furryPage = useLink({
 						</template>
 					</Button>
 
-					<Button v-tooltip.top="('翻新中')" :fluid="isMobile" disabled label="游戏" severity="secondary" size="small">
+					<Button :fluid="isMobile" :href="gamePage.href.value" :label="String(gamePage.route.value.name)" as="a" severity="secondary" size="small">
 						<template #icon>
 							<div class="i-tabler:device-gamepad"/>
 						</template>
