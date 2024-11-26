@@ -1,3 +1,5 @@
+import type { RankColors } from '~/types/tetrio'
+
 export default {
 	'x+': '#A763EA',
 	x: '#FF45FF',
@@ -17,6 +19,5 @@ export default {
 	'c-': '#79558C',
 	'd+': '#8E6091',
 	d: '#907591',
-
 	z: '#375433'
-} satisfies Record<string, string>
+} satisfies RankColors

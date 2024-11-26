@@ -30,3 +30,25 @@ export interface TetrioTimeLines {
 	readonly s1_rank: Season1RankTimeline[]
 	readonly s2_rank: Season2RankTimeline[]
 }
+
+export interface RankColors {
+	'x+': string
+	x: string
+	u: string
+	ss: string
+	's+': string
+	s: string
+	's-': string
+	'a+': string
+	a: string
+	'a-': string
+	'b+': string
+	b: string
+	'b-': string
+	'c+': string
+	c: string
+	'c-': string
+	'd+': string
+	d: string
+	z: string
+}
