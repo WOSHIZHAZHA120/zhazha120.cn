@@ -33,12 +33,6 @@ const furryPage = useLink({
 						</template>
 					</Button>
 
-					<Button v-tooltip.top="('翻新中')" :fluid="isMobile" disabled label="画廊" severity="secondary" size="small">
-						<template #icon>
-							<div class="i-ant-design:file-image-outlined"/>
-						</template>
-					</Button>
-
 					<Button v-tooltip.top="('翻新中')" :fluid="isMobile" disabled label="游戏" severity="secondary" size="small">
 						<template #icon>
 							<div class="i-tabler:device-gamepad"/>
@@ -57,12 +51,6 @@ const furryPage = useLink({
 		<div class="flex-1">
 			<Panel header="在线工具">
 				<div class="flex flex-wrap gap-2">
-					<Button v-tooltip.top="('翻新中')" :fluid="isMobile" disabled label="图片水印工具" severity="secondary" size="small">
-						<template #icon>
-							<div class="i-tabler:image-in-picture"/>
-						</template>
-					</Button>
-
 					<Button v-tooltip.top="('翻新中')" :fluid="isMobile" disabled label="acc 计算器" severity="secondary" size="small">
 						<template #icon>
 							<div class="i-ant-design:calculator-outlined"/>
