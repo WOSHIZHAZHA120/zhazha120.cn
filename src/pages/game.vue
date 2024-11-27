@@ -7,6 +7,7 @@ definePageMeta({
 <template>
 	<shared-subpage>
 		<div class="flex flex-col gap-2">
+			<game-osu_mania/>
 			<game-tetrio/>
 			<game-malody/>
 		</div>
