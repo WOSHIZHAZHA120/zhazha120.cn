@@ -8,6 +8,7 @@ definePageMeta({
 	<shared-subpage>
 		<div class="flex flex-col gap-2">
 			<game-tetrio/>
+			<game-malody/>
 		</div>
 	</shared-subpage>
 </template>
