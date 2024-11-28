@@ -12,6 +12,11 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			title: '渣渣120'
+		},
+		pageTransition: {
+			name: 'page',
+			mode: 'out-in',
+			appear: true
 		}
 	},
 	scripts: {

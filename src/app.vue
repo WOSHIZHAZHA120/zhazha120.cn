@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import '~/styles/global.scss'
+import '~/styles/transitions/page.scss'
 import isMobile from '~/core/shared/isMobile'
 </script>
 
