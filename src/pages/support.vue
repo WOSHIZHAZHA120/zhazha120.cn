@@ -72,5 +72,5 @@ definePageMeta({
 </template>
 
 <style lang="scss">
-@import '~/styles/utils';
+@use '~/styles/utils';
 </style>

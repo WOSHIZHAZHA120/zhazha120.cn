@@ -24,6 +24,6 @@ tryOnMounted(async () => {
 </template>
 
 <style lang="scss">
-@import '~/styles/utils';
-@import '~/styles/transitions/scale';
+@use '~/styles/utils';
+@use '~/styles/transitions/scale';
 </style>

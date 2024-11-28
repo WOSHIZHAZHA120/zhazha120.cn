@@ -39,6 +39,6 @@ import isMobile from '~/core/shared/isMobile'
 </template>
 
 <style lang="scss">
-@import '~/styles/global';
-@import '~/styles/transitions/page';
+@use '~/styles/global';
+@use '~/styles/transitions/page';
 </style>
