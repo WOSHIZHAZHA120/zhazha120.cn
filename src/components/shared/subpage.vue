@@ -50,7 +50,7 @@ const titleSlot = computed(() => {
 
 				<template #[titleSlot]>
 					<div :class="{ 'mr-2': isMobile }">
-						<span>{{ title }}</span>
+						<span class="text-sm">{{ title }}</span>
 					</div>
 				</template>
 			</Toolbar>
