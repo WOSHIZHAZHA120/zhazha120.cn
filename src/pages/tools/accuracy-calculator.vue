@@ -9,7 +9,6 @@ interface AccuracyData {
 </script>
 
 <script lang="ts" setup>
-import '~/styles/transitions/fade.scss'
 import { isEmpty, isNonNullish, isNullish, last, map, pipe, prop, round, sum } from 'remeda'
 import database from '~/core/shared/data/accuracy-calculator/database'
 import isMobile from '~/core/shared/isMobile'
@@ -289,6 +288,8 @@ console.log(data)
 </template>
 
 <style lang="scss">
+@import '~/styles/transitions/fade';
+
 @keyframes passed {
 	0%, 100% {
 		@apply scale-100;

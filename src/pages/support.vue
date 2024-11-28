@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import '~/styles/utils.scss'
-
 import support_alipay from '~/assets/support_alipay.webp'
 import support_alipay_redpacket from '~/assets/support_alipay_redpacket.webp'
 import support_qq from '~/assets/support_qq.webp'
@@ -72,3 +70,7 @@ definePageMeta({
 		</Tabs>
 	</shared-subpage>
 </template>
+
+<style lang="scss">
+@import '~/styles/utils';
+</style>

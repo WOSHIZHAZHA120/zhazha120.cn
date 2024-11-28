@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import '~/styles/global.scss'
-import '~/styles/transitions/page.scss'
 import isMobile from '~/core/shared/isMobile'
 </script>
 
@@ -39,3 +37,8 @@ import isMobile from '~/core/shared/isMobile'
 		</div>
 	</NuxtLayout>
 </template>
+
+<style lang="scss">
+@import '~/styles/global';
+@import '~/styles/transitions/page';
+</style>

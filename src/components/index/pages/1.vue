@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import '~/styles/utils.scss'
-import '~/styles/transitions/scale.scss'
-
 import { tryOnMounted } from '@vueuse/core'
 
 const loaded = ref(false)
@@ -25,3 +22,8 @@ tryOnMounted(async () => {
 		</Transition>
 	</div>
 </template>
+
+<style lang="scss">
+@import '~/styles/utils';
+@import '~/styles/transitions/scale';
+</style>
