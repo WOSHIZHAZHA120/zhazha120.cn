@@ -59,7 +59,7 @@ const toolsAccuracyCalculatorPage = useLink({
 		<div class="flex-1">
 			<Panel header="在线工具">
 				<div class="flex flex-wrap gap-2">
-					<Button :fluid="isMobile" :href="toolsAccuracyCalculatorPage.href.value" :label="String(toolsAccuracyCalculatorPage.route.value.name)" label="acc 计算器" severity="secondary" size="small">
+					<Button :fluid="isMobile" :href="toolsAccuracyCalculatorPage.href.value" :label="String(toolsAccuracyCalculatorPage.route.value.name)" as="a" severity="secondary" size="small">
 						<template #icon>
 							<div class="i-ant-design:calculator-outlined"/>
 						</template>
