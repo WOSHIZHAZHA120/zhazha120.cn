@@ -9,6 +9,7 @@ interface AccuracyData {
 </script>
 
 <script lang="ts" setup>
+import type { InputNumberInputEvent } from 'primevue'
 import { isEmpty, isNonNullish, isNullish, last, map, pipe, prop, round, sum } from 'remeda'
 import database from '~/core/shared/data/accuracy-calculator/database'
 import isMobile from '~/core/shared/isMobile'
@@ -113,7 +114,7 @@ const toast = useToast()
 
 const remove = (event: MouseEvent, index: number) => {
 	confirm.require({
-		target: event.currentTarget! as HTMLElement,
+		target: event.currentTarget as HTMLElement,
 		message: '真删 ?',
 		icon: 'i-twemoji:thinking-face',
 		rejectProps: {
@@ -137,11 +138,18 @@ const remove = (event: MouseEvent, index: number) => {
 	})
 }
 
+const followInputNumber = (e: InputNumberInputEvent) => {
+	const target = e.originalEvent.target as HTMLElement
+
+	if (isNonNullish(target)) {
+		target.blur()
+		target.focus()
+	}
+}
+
 definePageMeta({
 	name: 'acc 计算器'
 })
-
-console.log(data)
 </script>
 
 <template>
@@ -159,7 +167,7 @@ console.log(data)
 			<Panel :collapsed="true" header="编辑器" toggleable>
 				<div class="flex flex-col gap-2">
 					<IftaLabel>
-						<InputNumber v-model.number="passRequirePercentage" :max="100" :min="0" :step="1" suffix="%"/>
+						<InputNumber v-model="passRequirePercentage" :allow-empty="false" :format="false" :max="100" :min="0" :step="1" show-buttons suffix="%"/>
 						<label>过段要求</label>
 					</IftaLabel>
 
@@ -182,7 +190,7 @@ console.log(data)
 							</div>
 
 							<IftaLabel>
-								<InputNumber v-model="item.notes" :min="1" :step="1" auto-resize/>
+								<InputNumber v-model="item.notes" :allow-empty="false" :format="false" :min="1" :step="1" show-buttons/>
 								<label>物量</label>
 							</IftaLabel>
 
@@ -223,7 +231,7 @@ console.log(data)
 										</div>
 
 										<IftaLabel>
-											<InputNumber v-model="item.accuracy" :max="100" :max-fraction-digits="2" :min="0" :min-fraction-digits="2" :step="0.01" class="w-fit" mode="decimal" suffix="%"/>
+											<InputNumber v-model="item.accuracy" :allow-empty="false" :format="false" :max="100" :max-fraction-digits="2" :min="0" :step="0.01" class="w-fit" show-buttons suffix="%"/>
 											<label>出第 {{ index + 1 }} 首歌时的 acc</label>
 										</IftaLabel>
 
