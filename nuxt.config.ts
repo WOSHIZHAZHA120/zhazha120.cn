@@ -1,5 +1,8 @@
 import { definePreset } from '@primeuix/styled'
 import Aura from '@primevue/themes/aura'
+import AutoImport from 'unplugin-auto-import/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -29,7 +32,8 @@ export default defineNuxtConfig({
 	modules: [
 		'@unocss/nuxt',
 		'@primevue/nuxt-module',
-		'@nuxt/scripts'
+		'@nuxt/scripts',
+		'nuxtjs-naive-ui'
 	],
 	primevue: {
 		options: {
@@ -53,5 +57,27 @@ export default defineNuxtConfig({
 				})
 			}
 		}
+	},
+	vite: {
+		plugins: [
+			AutoImport({
+				imports: [
+					{
+						'naive-ui': [
+							'useDialog',
+							'useMessage',
+							'useModal',
+							'useNotification',
+							'useLoadingBar'
+						]
+					}
+				]
+			}),
+			Components({
+				resolvers: [
+					NaiveUiResolver()
+				]
+			})
+		]
 	}
 })
