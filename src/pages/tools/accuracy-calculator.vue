@@ -11,9 +11,6 @@ definePageMeta({
 
 <template>
 	<shared-subpage>
-		<Toast/>
-		<ConfirmPopup/>
-
 		<div class="flex flex-col gap-2">
 			<Panel :collapsed="true" header="预设" toggleable>
 				<tools-accuracy_calculator-presets v-model:data="data" v-model:pass-require-percentage="passRequirePercentage"/>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { ConfirmPopup, IftaLabel, Toast } from 'primevue'
 import type { AccuracyData } from '~/types/accuracy-calculator'
 
 const data = defineModel<AccuracyData[]>('data', {
@@ -37,7 +38,7 @@ const remove = (event: MouseEvent, index: number) => {
 			label: '对'
 		},
 		accept: () => {
-			data.value = data.value.slice(index, 1)
+			data.value.splice(index, 1)
 
 			toast.add({
 				severity: 'success',
@@ -52,6 +53,9 @@ const remove = (event: MouseEvent, index: number) => {
 
 <template>
 	<div class="flex flex-col gap-2">
+		<Toast/>
+		<ConfirmPopup/>
+
 		<n-form-item label="过段要求">
 			<n-input-number v-model:value="passRequirePercentage" :max="100" :min="0" :step="1">
 				<template #suffix>%</template>
