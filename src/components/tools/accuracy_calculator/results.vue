@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { isNullish, map, pipe, prop, round, sumBy, takeWhile } from 'remeda'
+import { isEmpty, isNullish, map, pipe, prop, round, sumBy, takeWhile } from 'remeda'
 import type { AccuracyData } from '~/types/accuracy-calculator'
 
 const data = defineModel<AccuracyData[]>('data', {
@@ -50,7 +50,7 @@ const results = computed(() => {
 				<div class="flex flex-col gap-2">
 					<tools-accuracy_calculator-results-editor v-model:data="data"/>
 
-					<template v-if="results.length > 0">
+					<template v-if="!isEmpty(results)">
 						<div class="mt-10">
 							<div class="flex flex-col gap-2">
 								<tools-accuracy_calculator-results-accuracys :pass-require-percentage="passRequirePercentage" :results="results"/>
