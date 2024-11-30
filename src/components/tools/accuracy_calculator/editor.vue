@@ -37,7 +37,7 @@ const remove = (event: MouseEvent, index: number) => {
 			label: '对'
 		},
 		accept: () => {
-			data.splice(index, 1)
+			data.value = data.value.slice(index, 1)
 
 			toast.add({
 				severity: 'success',
