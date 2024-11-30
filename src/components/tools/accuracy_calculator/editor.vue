@@ -103,5 +103,5 @@ const remove = (event: MouseEvent, index: number) => {
 </template>
 
 <style lang="scss">
-@import '~/styles/transitions/fade';
+@use '~/styles/transitions/fade';
 </style>

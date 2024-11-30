@@ -36,5 +36,5 @@ const lastAcc = computed(() => {
 </template>
 
 <style lang="scss">
-@import '~/styles/transitions/fade';
+@use '~/styles/transitions/fade';
 </style>

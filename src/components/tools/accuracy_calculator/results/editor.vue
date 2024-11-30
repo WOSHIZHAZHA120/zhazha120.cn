@@ -34,5 +34,5 @@ import type { AccuracyData } from '~/types/accuracy-calculator'
 </template>
 
 <style lang="scss">
-@import '~/styles/transitions/fade';
+@use '~/styles/transitions/fade';
 </style>

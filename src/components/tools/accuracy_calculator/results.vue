@@ -65,19 +65,5 @@ const results = computed(() => {
 </template>
 
 <style lang="scss">
-@import '~/styles/transitions/fade';
-
-@keyframes passed {
-	0%, 100% {
-		@apply scale-100;
-	}
-
-	50% {
-		@apply scale-120;
-	}
-
-	100% {
-		@apply rotate-360;
-	}
-}
+@use '~/styles/transitions/fade';
 </style>
