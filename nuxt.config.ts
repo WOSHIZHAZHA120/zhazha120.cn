@@ -1,7 +1,7 @@
 import { definePreset } from '@primeuix/styled'
 import Aura from '@primevue/themes/aura'
 import AutoImport from 'unplugin-auto-import/vite'
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import { NaiveUiResolver, PrimeVueResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -75,7 +75,8 @@ export default defineNuxtConfig({
 			}),
 			Components({
 				resolvers: [
-					NaiveUiResolver()
+					NaiveUiResolver(),
+					PrimeVueResolver()
 				]
 			})
 		]
