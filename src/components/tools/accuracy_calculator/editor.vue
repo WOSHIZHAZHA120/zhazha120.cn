@@ -52,10 +52,11 @@ const remove = (event: MouseEvent, index: number) => {
 
 <template>
 	<div class="flex flex-col gap-2">
-		<IftaLabel>
-			<InputNumber v-model="passRequirePercentage" :allow-empty="false" :format="false" :max="100" :min="0" :step="1" show-buttons suffix="%"/>
-			<label>过段要求</label>
-		</IftaLabel>
+		<n-form-item label="过段要求">
+			<n-input-number v-model:value="passRequirePercentage" :max="100" :min="0" :step="1">
+				<template #suffix>%</template>
+			</n-input-number>
+		</n-form-item>
 
 		<Divider/>
 
@@ -76,10 +77,9 @@ const remove = (event: MouseEvent, index: number) => {
 						</IftaLabel>
 					</div>
 
-					<IftaLabel>
-						<InputNumber v-model="item.notes" :allow-empty="false" :format="false" :min="1" :step="1" show-buttons/>
-						<label>物量</label>
-					</IftaLabel>
+					<n-form-item label="物量">
+						<n-input-number v-model:value="item.notes" :max="100" :min="0" :step="0.01"/>
+					</n-form-item>
 
 					<Button :dt="{ padding: 0 }" variant="text" @click="e => remove(e, index)">
 						<template #icon>

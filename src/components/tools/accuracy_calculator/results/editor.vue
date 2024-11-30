@@ -17,10 +17,11 @@ import type { AccuracyData } from '~/types/accuracy-calculator'
 					<span v-if="isNonNullish(item.name.original) && !isEmpty(item.name.original)" class="text-xs opacity-50">{{ item.name.original }}</span>
 				</div>
 
-				<IftaLabel>
-					<InputNumber v-model="item.accuracy" :allow-empty="false" :format="false" :max="100" :max-fraction-digits="2" :min="0" :step="0.01" class="w-fit" show-buttons suffix="%"/>
-					<label>出第 {{ index + 1 }} 首歌时的 acc</label>
-				</IftaLabel>
+				<n-form-item :label="(`出第 ${index + 1} 首歌时的 acc`)">
+					<n-input-number v-model:value="item.accuracy" :max="100" :min="0" :step="0.01">
+						<template #suffix>%</template>
+					</n-input-number>
+				</n-form-item>
 
 				<span class="text-sm opacity-50">{{ item.notes }} 物量 ({{ round(item.notes / sumBy(data, prop('notes')) * 100, 2) }}%)</span>
 
