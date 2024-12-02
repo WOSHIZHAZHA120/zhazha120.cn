@@ -9,16 +9,20 @@ const isAvatarHovered = useElementHover(avatarContainer)
 </script>
 
 <template>
-	<div ref="avatarContainer" :class="{ 'w-full': isMobile }" class="screen-center-flex size-120">
-		<Transition mode="out-in" name="fade">
-			<template v-if="isAvatarHovered">
-				<Image :src="furry_1" alt="设定" image-class="size-full"/>
-			</template>
+	<div :class="{ 'w-full mt-20': isMobile }">
+		<div :class="{ 'size-60': isMobile }" class="size-120 mx-auto">
+			<div ref="avatarContainer" :class="{ 'w-full': isMobile }" class="screen-center-flex">
+				<Transition mode="out-in" name="fade">
+					<template v-if="isAvatarHovered">
+						<Image :src="furry_1" alt="设定" image-class="size-full"/>
+					</template>
 
-			<template v-else>
-				<Image :src="avatar_furry" alt="头像" image-class="size-60 rounded"/>
-			</template>
-		</Transition>
+					<template v-else>
+						<Image :src="avatar_furry" alt="头像" image-class="size-60 rounded"/>
+					</template>
+				</Transition>
+			</div>
+		</div>
 	</div>
 </template>
 

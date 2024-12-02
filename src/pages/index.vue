@@ -23,7 +23,7 @@ const goDown = () => {
 			<index-pages-1/>
 
 			<Transition mode="out-in" name="fade">
-				<div v-if="windowScroll.y.value <= 0" class="absolute left-1/2 bottom-50 -translate-x-1/2">
+				<div v-if="windowScroll.y.value <= 0" class="absolute left-1/2 bottom-60 -translate-x-1/2">
 					<div class="animate-bounce" @click="goDown">
 						<div class="p-2 text-4xl">
 							<div class="i-ant-design:down-circle-filled"/>
