@@ -9,7 +9,7 @@ defineProps<{
 	<div class="flex justify-center items-center gap-2">
 		<TransitionGroup appear mode="out-in" name="fade">
 			<template v-for="(result, index) in results">
-				<Message :severity="(result >= passRequirePercentage ? 'success' : 'error')" class="w-fit">{{ result }}%</Message>
+				<Message :dt="{ 'content.padding': '0.25rem' }" :severity="(result >= passRequirePercentage ? 'success' : 'error')" class="w-fit">{{ result }}%</Message>
 
 				<Transition appear mode="out-in" name="fade">
 					<template v-if="results.length !== index + 1">
