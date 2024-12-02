@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-import { useWindowSize } from '@vueuse/core'
+import { useWindowScroll, useWindowSize } from '@vueuse/core'
 import { isNonNullish } from 'remeda'
 
 const windowSize = useWindowSize()
 const minHeight = Math.max(windowSize.height.value, 960)
 
 const page2_container = ref<HTMLDivElement>()
+const windowScroll = useWindowScroll()
 
 const goDown = () => {
 	if (isNonNullish(page2_container.value)) {
@@ -21,13 +22,15 @@ const goDown = () => {
 		<div :style="{ 'min-height': `${minHeight}px` }" class="relative">
 			<index-pages-1/>
 
-			<div class="absolute left-1/2 bottom-20 -translate-x-1/2">
-				<div class="animate-bounce" @click="goDown">
-					<div class="p-2 text-4xl">
-						<div class="i-ant-design:down-circle-filled"/>
+			<Transition mode="out-in" name="fade">
+				<div v-if="windowScroll.y.value <= 0" class="absolute left-1/2 bottom-50 -translate-x-1/2">
+					<div class="animate-bounce" @click="goDown">
+						<div class="p-2 text-4xl">
+							<div class="i-ant-design:down-circle-filled"/>
+						</div>
 					</div>
 				</div>
-			</div>
+			</Transition>
 		</div>
 
 		<div ref="page2_container" :style="{ 'min-height': 'calc(100vh - 3rem)' }">
@@ -35,3 +38,7 @@ const goDown = () => {
 		</div>
 	</div>
 </template>
+
+<style lang="scss">
+@use '~/styles/transitions/fade';
+</style>
