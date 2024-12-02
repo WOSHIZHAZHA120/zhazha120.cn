@@ -28,7 +28,7 @@ const naiveTheme = computed(() => {
 							<div class="mt-4 position-sticky bottom-2 z-120">
 								<div class="flex justify-center">
 									<Panel :dt="{ 'header.padding': 0, 'content.padding': '0.5rem' }">
-										<div class="flex flex-wrap justify-center items-center">
+										<div :class="{ 'leading-none': isMobile }" class="flex flex-wrap justify-center items-center">
 											<span class="text-xs">&copy; 2024 - {{ new Date().getFullYear() }}</span>
 
 											<template v-if="!isMobile">
