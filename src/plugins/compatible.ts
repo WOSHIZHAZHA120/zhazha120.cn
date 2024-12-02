@@ -1,4 +1,4 @@
-export default defineNuxtPlugin((app) => {
+export default defineNuxtPlugin(() => {
 	const router = useRouter()
 
 	router.addRoute({
