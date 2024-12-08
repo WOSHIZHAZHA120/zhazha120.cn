@@ -10,7 +10,7 @@ const isAvatarHovered = useElementHover(avatarContainer)
 
 <template>
 	<div :class="{ 'w-full mt-20': isMobile }">
-		<div :class="{ 'size-60': isMobile }" class="size-120 mx-auto">
+		<div class="size-60 mx-auto">
 			<div ref="avatarContainer" :class="{ 'w-full': isMobile }" class="screen-center-flex">
 				<Transition mode="out-in" name="fade">
 					<template v-if="isAvatarHovered">

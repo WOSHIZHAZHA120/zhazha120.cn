@@ -12,9 +12,9 @@ tryOnMounted(async () => {
 </script>
 
 <template>
-	<div :class="{ 'screen-center -ml-15': !isMobile }">
+	<div :class="{ 'screen-center': !isMobile }">
 		<Transition appear mode="out-in" name="scale">
-			<div v-if="loaded" class="flex flex-wrap items-center gap-10">
+			<div v-if="loaded" :class="{ 'flex-wrap': isMobile }" class="flex items-center gap-10">
 				<index-pages-1-avatar/>
 
 				<div :class="{ 'text-center w-full': isMobile }" class="flex justify-center">
