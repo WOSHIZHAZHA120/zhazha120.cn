@@ -82,7 +82,7 @@ const remove = (event: MouseEvent, index: number) => {
 					</div>
 
 					<n-form-item label="物量">
-						<n-input-number v-model:value="item.notes" :max="100" :min="0" :step="1"/>
+						<n-input-number v-model:value="item.notes" :min="1" :step="1"/>
 					</n-form-item>
 
 					<Button :dt="{ padding: 0 }" variant="text" @click="e => remove(e, index)">
