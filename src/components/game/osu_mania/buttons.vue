@@ -9,5 +9,11 @@ import isMobile from '~/core/shared/isMobile'
 				<div class="i-ant-design:user-outlined"/>
 			</template>
 		</Button>
+
+		<Button :dt="{ padding: 0 }" :fluid="isMobile" as="a" href="https://cdn.zhazha120.cn/download/osu_skin.osk" label="拿我皮肤" severity="secondary" size="small">
+			<template #icon>
+				<div class="i-ant-design:download-outlined"/>
+			</template>
+		</Button>
 	</div>
 </template>
