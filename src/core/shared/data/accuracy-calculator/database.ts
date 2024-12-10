@@ -1868,5 +1868,39 @@ export default [
 			}
 		],
 		passRequirePercentage: 96
+	},
+	{
+		name: 'Hg Team Entry Examination V5.1',
+		data: [
+			{
+				name: {
+					english: 'Cave',
+					original: null
+				},
+				notes: 1989
+			},
+			{
+				name: {
+					english: 'Metal Globe',
+					original: null
+				},
+				notes: 2458
+			},
+			{
+				name: {
+					english: 'Sukisuki Zecchou Shou',
+					original: null
+				},
+				notes: 2408
+			},
+			{
+				name: {
+					english: 'Fallen Symphony',
+					original: null
+				},
+				notes: 3638
+			}
+		],
+		passRequirePercentage: 96
 	}
 ]
