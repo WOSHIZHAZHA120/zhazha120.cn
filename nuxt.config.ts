@@ -1,16 +1,10 @@
 import { definePreset } from '@primeuix/styled'
 import Aura from '@primevue/themes/aura'
-import AutoImport from 'unplugin-auto-import/vite'
-import { NaiveUiResolver, PrimeVueResolver } from 'unplugin-vue-components/resolvers'
-import Components from 'unplugin-vue-components/vite'
 
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	ssr: false,
 	srcDir: 'src',
-	devtools: {
-		enabled: true
-	},
 	app: {
 		head: {
 			title: '渣渣120'
@@ -31,8 +25,7 @@ export default defineNuxtConfig({
 	modules: [
 		'@unocss/nuxt',
 		'@primevue/nuxt-module',
-		'@nuxt/scripts',
-		'nuxtjs-naive-ui'
+		'@nuxt/scripts'
 	],
 	primevue: {
 		options: {
