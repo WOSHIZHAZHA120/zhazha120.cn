@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { isNullish } from 'remeda'
-import isMobile from '~/core/shared/isMobile'
+import isMobile from '~/shared/isMobile'
 
 const route = useRoute()
 const router = useRouter()

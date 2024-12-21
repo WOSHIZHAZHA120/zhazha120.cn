@@ -50,27 +50,11 @@ export default defineNuxtConfig({
 			}
 		}
 	},
-	vite: {
-		plugins: [
-			AutoImport({
-				imports: [
-					{
-						'naive-ui': [
-							'useDialog',
-							'useMessage',
-							'useModal',
-							'useNotification',
-							'useLoadingBar'
-						]
-					}
-				]
-			}),
-			Components({
-				resolvers: [
-					NaiveUiResolver(),
-					PrimeVueResolver()
-				]
-			})
-		]
-	}
+	extends: [
+		'src/modules/index',
+		'src/modules/support',
+		'src/modules/game',
+		'src/modules/furry',
+		'src/modules/accuracy-calculator'
+	]
 })

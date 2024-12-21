@@ -4,7 +4,14 @@ export default defineNuxtPlugin(() => {
 	router.addRoute({
 		path: '/toolbox/4k/accuracy_calculator',
 		redirect: () => ({
-			path: '/tools/accuracy-calculator'
+			path: '/accuracy-calculator'
+		})
+	})
+
+	router.addRoute({
+		path: '/tools/accuracy-calculator',
+		redirect: () => ({
+			path: '/accuracy-calculator'
 		})
 	})
 })

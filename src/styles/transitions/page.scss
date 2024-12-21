@@ -1,7 +1,7 @@
 .page {
 	&-enter-active,
 	&-leave-active {
-		@apply transition-all duration-500 ease-linear;
+		@apply transition-(all ease-linear);
 	}
 
 	&-enter-from,

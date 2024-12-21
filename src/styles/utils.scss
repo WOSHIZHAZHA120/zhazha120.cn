@@ -1,7 +1,7 @@
 .screen-center {
-	@apply absolute left-1/2 top-1/2 -translate-1/2;
+	@apply position-(absolute left-1/2 top-1/2) -translate-1/2;
 }
 
 .screen-center-flex {
-	@apply flex justify-center items-center h-full;
+	@apply flex flex-(justify-center items-center) h-full;
 }

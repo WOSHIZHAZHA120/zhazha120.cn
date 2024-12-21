@@ -1,7 +1,7 @@
 .scale {
 	&-enter-active,
 	&-leave-active {
-		@apply transition-all duration-500 ease-linear;
+		@apply transition-(transform ease-linear);
 	}
 
 	&-enter-from {

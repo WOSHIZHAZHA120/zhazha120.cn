@@ -1,7 +1,7 @@
 .fade {
 	&-enter-active,
 	&-leave-active {
-		@apply transition-opacity ease-linear;
+		@apply transition-(opacity ease-linear);
 	}
 
 	&-enter-from,
