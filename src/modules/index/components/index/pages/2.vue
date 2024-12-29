@@ -8,5 +8,8 @@
 
 		<Divider>一些其他的东西</Divider>
 		<index-pages-2-misc/>
+
+		<Divider>好朋友们w</Divider>
+		<index-pages-2-friends_links/>
 	</div>
 </template>
