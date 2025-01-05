@@ -4,6 +4,7 @@ import friends_link_2 from '~/assets/friends_link_2.webp'
 import friends_link_3 from '~/assets/friends_link_3.webp'
 import friends_link_4 from '~/assets/friends_link_4.webp'
 import friends_link_5 from '~/assets/friends_link_5.webp'
+import friends_link_6 from '~/assets/friends_link_6.webp'
 import type FriendsLink from '~/types/friends_link'
 
 export default [
@@ -42,5 +43,11 @@ export default [
 		description: '',
 		icon: friends_link_5,
 		href: 'https://blog.fqilin.top'
+	},
+	{
+		name: '是只林风呐',
+		description: '-来点奇奇怪怪的- < )',
+		icon: friends_link_6,
+		href: 'https://linfun.top'
 	}
 ] satisfies FriendsLink[]
