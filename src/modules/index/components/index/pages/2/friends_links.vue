@@ -9,7 +9,7 @@ import friends_links from '~/shared/friends_links'
 				<Button :dt="{ 'padding.x': 0, 'padding.y': 0 }" :href="friends_link.href" as="a" class="transition-opacity hover:opacity-80" text>
 					<Panel :dt="{ 'header.padding': 0, 'content-padding': '1rem' }" class="w-fit">
 						<div class="flex items-center gap-2">
-							<div class="size-12">
+							<div class="h-12">
 								<Image :src="friends_link.icon" image-class="size-full rounded-full"/>
 							</div>
 
