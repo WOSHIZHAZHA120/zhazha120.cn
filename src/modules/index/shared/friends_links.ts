@@ -6,6 +6,7 @@ import friends_link_4 from '~/assets/friends_link_4.webp'
 import friends_link_5 from '~/assets/friends_link_5.webp'
 import friends_link_6 from '~/assets/friends_link_6.webp'
 import friends_link_7 from '~/assets/friends_link_7.webp'
+import friends_link_8 from '~/assets/friends_link_8.webp'
 import type FriendsLink from '~/types/friends_link'
 
 export default [
@@ -56,5 +57,11 @@ export default [
 		description: 'koto 的灌水站',
 		icon: friends_link_7,
 		href: 'https://koto.cc'
+	},
+	{
+		name: '西西のBlog',
+		description: '嘻嘻西西CC吸吸',
+		icon: friends_link_8,
+		href: 'https://xxand.cc'
 	}
 ] satisfies FriendsLink[]
