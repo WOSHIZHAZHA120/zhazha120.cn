@@ -2,7 +2,7 @@ import { definePreset } from '@primeuix/styled'
 import Aura from '@primevue/themes/aura'
 
 export default defineNuxtConfig({
-	compatibilityDate: '2024-11-01',
+	compatibilityDate: '2025-01-20',
 	ssr: false,
 	srcDir: 'src',
 	app: {
@@ -55,6 +55,7 @@ export default defineNuxtConfig({
 		'src/layers/support',
 		'src/layers/game',
 		'src/layers/furry',
-		'src/layers/accuracy-calculator'
+		'src/layers/accuracy-calculator',
+		'src/layers/blog'
 	]
 })
