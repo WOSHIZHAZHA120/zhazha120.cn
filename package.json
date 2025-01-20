@@ -15,6 +15,7 @@
 		"@iconify-json/simple-icons": "^1.2.20",
 		"@iconify-json/tabler": "^1.2.14",
 		"@iconify-json/twemoji": "^1.2.2",
+		"@nuxt/content": "^3.0.0",
 		"@nuxt/scripts": "^0.9.5",
 		"@primevue/nuxt-module": "^4.2.5",
 		"@primevue/themes": "^4.2.5",
