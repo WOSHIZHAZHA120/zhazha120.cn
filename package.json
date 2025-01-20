@@ -6,7 +6,7 @@
 		"build": "nuxt build",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+		"postinstall": "bun prepare.ts"
 	},
 	"devDependencies": {
 		"@iconify-json/ant-design": "^1.2.5",
