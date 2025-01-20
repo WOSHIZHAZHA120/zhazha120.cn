@@ -1,10 +1,6 @@
 <script setup lang="ts">
 const post = useAsyncData(async () => {
-	const result = await queryCollection('blog').first()
-
-	result.body.value = result.body.value.slice(1)
-
-	return result
+	return await queryCollection('blog').first()
 })
 
 definePageMeta({
