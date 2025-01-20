@@ -3,6 +3,15 @@ import Aura from '@primevue/themes/aura'
 
 export default defineNuxtConfig({
 	compatibilityDate: '2025-01-20',
+	$production: {
+		scripts: {
+			registry: {
+				clarity: {
+					id: 'oegssgxsei'
+				}
+			}
+		}
+	},
 	ssr: false,
 	srcDir: 'src',
 	app: {
@@ -13,13 +22,6 @@ export default defineNuxtConfig({
 			name: 'page',
 			mode: 'out-in',
 			appear: true
-		}
-	},
-	scripts: {
-		registry: {
-			clarity: {
-				id: 'oegssgxsei'
-			}
 		}
 	},
 	modules: [
