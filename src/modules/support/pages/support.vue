@@ -50,20 +50,20 @@ definePageMeta({
 
 				<TabPanel value="qq">
 					<div class="flex justify-center">
-						<Image :src="support_qq" alt="QQ 支付" image-class="w-full" preview/>
+						<Image :src="support_qq" alt="QQ 支付" image-class="w-100" preview/>
 					</div>
 				</TabPanel>
 
 				<TabPanel value="wechat">
 					<div class="flex justify-center">
-						<Image :src="support_wechat" alt="微信支付" image-class="w-full" preview/>
+						<Image :src="support_wechat" alt="微信支付" image-class="w-100" preview/>
 					</div>
 				</TabPanel>
 
 				<TabPanel value="alipay">
-					<div class="flex flex-col items-center gap-2">
-						<Image :src="support_alipay" alt="支付宝支付" image-class="w-full" preview/>
-						<Image :src="support_alipay_redpacket" alt="支付宝红包" image-class="w-full" preview/>
+					<div class="flex justify-center items-center gap-2">
+						<Image :src="support_alipay" alt="支付宝支付" image-class="w-100" preview/>
+						<Image :src="support_alipay_redpacket" alt="支付宝红包" image-class="w-100" preview/>
 					</div>
 				</TabPanel>
 			</TabPanels>
