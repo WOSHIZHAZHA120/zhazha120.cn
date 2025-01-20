@@ -15,7 +15,7 @@ import friends_links from '~/shared/friends_links'
 
 							<div class="flex flex-col">
 								<span class="text-xl fw-extrabold">{{ friends_link.name }}</span>
-								<span class="text-sm text-gray">{{ friends_link.description }}</span>
+								<span class="text-sm text-(white opacity-50)">{{ friends_link.description }}</span>
 							</div>
 						</div>
 					</Panel>
