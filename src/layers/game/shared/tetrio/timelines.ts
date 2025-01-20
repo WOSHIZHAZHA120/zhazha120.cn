@@ -1,4 +1,4 @@
-import type { TetrioTimeLines } from '~/modules/game/types/tetrio'
+import type { TetrioTimeLines } from '~/types/tetrio'
 
 export default {
 	sprint: [

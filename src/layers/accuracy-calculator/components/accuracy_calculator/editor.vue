@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ConfirmPopup, IftaLabel, Toast } from 'primevue'
-import type { AccuracyData } from '~/modules/accuracy-calculator/types/accuracy-calculator'
+import type { AccuracyData } from '~/types/accuracy-calculator'
 
 const data = defineModel<AccuracyData[]>('data', {
 	required: true

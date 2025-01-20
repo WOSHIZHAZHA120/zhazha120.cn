@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { AccuracyData } from '~/modules/accuracy-calculator/types/accuracy-calculator'
+import type { AccuracyData } from '~/types/accuracy-calculator'
 
 const data = ref<AccuracyData[]>([])
 const passRequirePercentage = ref(0)

@@ -1,4 +1,4 @@
-import type { Level } from '~/modules/game/types/malody'
+import type { Level } from '~/types/malody'
 
 export default {
 	jack: ['Extra', 6].join(' '),

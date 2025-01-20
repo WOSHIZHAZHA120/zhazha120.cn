@@ -51,10 +51,10 @@ export default defineNuxtConfig({
 		}
 	},
 	extends: [
-		'src/modules/index',
-		'src/modules/support',
-		'src/modules/game',
-		'src/modules/furry',
-		'src/modules/accuracy-calculator'
+		'src/layers/index',
+		'src/layers/support',
+		'src/layers/game',
+		'src/layers/furry',
+		'src/layers/accuracy-calculator'
 	]
 })

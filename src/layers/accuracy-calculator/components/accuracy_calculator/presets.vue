@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { isNullish, map, pipe } from 'remeda'
 import presets from '~/shared/presets'
-import type { AccuracyCalculatorPresetItem, AccuracyData } from '~/modules/accuracy-calculator/types/accuracy-calculator'
+import type { AccuracyCalculatorPresetItem, AccuracyData } from '~/types/accuracy-calculator'
 
 const data = defineModel<AccuracyData[]>('data', {
 	required: true

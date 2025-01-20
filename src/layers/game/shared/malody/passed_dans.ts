@@ -1,4 +1,4 @@
-import type { PassedDan } from '~/modules/game/types/malody'
+import type { PassedDan } from '~/types/malody'
 
 export default [
 	{

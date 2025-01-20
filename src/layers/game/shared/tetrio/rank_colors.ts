@@ -1,4 +1,4 @@
-import type { RankColors } from '~/modules/game/types/tetrio'
+import type { RankColors } from '~/types/tetrio'
 
 export default {
 	'x+': '#A763EA',

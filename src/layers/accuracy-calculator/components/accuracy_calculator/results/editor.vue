@@ -6,7 +6,7 @@ const data = defineModel<AccuracyData[]>('data', {
 import { IftaLabel } from 'primevue'
 import { isEmpty, isNonNullish, prop, round, sumBy } from 'remeda'
 import isMobile from '~/shared/isMobile'
-import type { AccuracyData } from '~/modules/accuracy-calculator/types/accuracy-calculator'
+import type { AccuracyData } from '~/types/accuracy-calculator'
 </script>
 
 <template>

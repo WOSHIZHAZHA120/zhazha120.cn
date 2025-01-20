@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { isNullish, last, round } from 'remeda'
-import type { AccuracyData } from '~/modules/accuracy-calculator/types/accuracy-calculator'
+import type { AccuracyData } from '~/types/accuracy-calculator'
 
 const props = defineProps<{
 	readonly results: number[]

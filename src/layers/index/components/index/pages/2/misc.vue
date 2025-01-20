@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import tools_links from '~/modules/index/shared/tools_links'
-import useful_links from '~/modules/index/shared/useful_links'
+import tools_links from '~/shared/tools_links'
+import useful_links from '~/shared/useful_links'
 import isMobile from '~/shared/isMobile'
 </script>
 

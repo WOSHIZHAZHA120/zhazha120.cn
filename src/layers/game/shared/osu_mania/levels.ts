@@ -1,4 +1,4 @@
-import type { Level } from '~/modules/game/types/osu_mania'
+import type { Level } from '~/types/osu_mania'
 
 export default {
 	jack: 'α',
