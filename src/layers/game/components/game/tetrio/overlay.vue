@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import tetrio from '~/shared/tetrio/data'
 import isMobile from '~/shared/isMobile'
+import tetrio from '~/shared/tetrio/data'
 
 const query = computed(() => {
 	return Object.entries({
@@ -32,5 +32,5 @@ const url = computed(() => {
 </script>
 
 <template>
-	<iframe :src="url" class="border-none w-full h-60"/>
+	<iframe :src="url" class="border-none w-full h-240 color-scheme-normal"/>
 </template>
