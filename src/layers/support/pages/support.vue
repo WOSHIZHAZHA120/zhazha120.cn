@@ -33,7 +33,7 @@ definePageMeta({
 						<template v-for="link in ['https://afdian.com/a/WOSHIZHAZHA120']">
 							<shared-overlay>
 								<template #trigger>
-									<iframe :src="link" class="w-full h-[50vh] border-none"/>
+									<iframe :src="link" class="w-full h-240 border-none"/>
 								</template>
 
 								<div class="screen-center">
