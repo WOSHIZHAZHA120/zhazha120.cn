@@ -2,7 +2,9 @@
 
 .data
 .nuxt
+.output
 
+dist
 node_modules
 
 src/auto-imports.d.ts
