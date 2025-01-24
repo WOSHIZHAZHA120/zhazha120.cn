@@ -28,7 +28,8 @@ export default defineNuxtConfig({
 		'@unocss/nuxt',
 		'@primevue/nuxt-module',
 		'@nuxt/scripts',
-		'@nuxt/content'
+		'@nuxt/content',
+		'@vueuse/motion/nuxt'
 	],
 	primevue: {
 		options: {
