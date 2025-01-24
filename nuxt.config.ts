@@ -60,6 +60,7 @@ export default defineNuxtConfig({
 		'src/layers/game',
 		'src/layers/furry',
 		'src/layers/accuracy-calculator',
-		'src/layers/blog'
+		'src/layers/blog',
+		'src/layers/birthday'
 	]
 })
