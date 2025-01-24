@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import global_components from '~/shared/global_components'
 import isMobile from '~/shared/isMobile'
 </script>
 
@@ -35,6 +36,10 @@ import isMobile from '~/shared/isMobile'
 				</Panel>
 			</div>
 		</div>
+
+		<template v-for="global_component in global_components">
+			<Component :is="global_component"/>
+		</template>
 	</NuxtLayout>
 </template>
 
