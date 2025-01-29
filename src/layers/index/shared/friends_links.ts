@@ -38,7 +38,7 @@ export default [
 		name: 'LangYa466',
 		description: '',
 		icon: friends_link_4,
-		href: 'https://furry.ren'
+		href: 'https://furry.luxe'
 	},
 	{
 		name: 'F_Qilin',
