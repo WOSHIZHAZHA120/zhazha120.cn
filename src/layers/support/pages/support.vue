@@ -7,11 +7,21 @@ import support_wechat from '~/assets/support_wechat.webp'
 definePageMeta({
 	name: '赞助'
 })
+
+const tab = computed({
+	get: () => {
+		return location.hash.slice(1) ?? 'afdian'
+	},
+
+	set(value) {
+		location.hash = value
+	}
+})
 </script>
 
 <template>
 	<shared-subpage>
-		<Tabs value="afdian">
+		<Tabs v-model:value="tab">
 			<TabList>
 				<div class="w-full">
 					<div class="flex justify-evenly font-sans">
@@ -33,7 +43,7 @@ definePageMeta({
 						<template v-for="link in ['https://afdian.com/a/WOSHIZHAZHA120']">
 							<shared-overlay>
 								<template #trigger>
-									<iframe :src="link" class="w-full h-240 border-none"/>
+									<iframe :src="link" class="w-full h-[50vh] border-none"/>
 								</template>
 
 								<div class="screen-center">
@@ -50,20 +60,20 @@ definePageMeta({
 
 				<TabPanel value="qq">
 					<div class="flex justify-center">
-						<Image :src="support_qq" alt="QQ 支付" image-class="w-100" preview/>
+						<Image :src="support_qq" alt="QQ 支付" image-class="w-full sm:w-[20vw]" preview/>
 					</div>
 				</TabPanel>
 
 				<TabPanel value="wechat">
 					<div class="flex justify-center">
-						<Image :src="support_wechat" alt="微信支付" image-class="w-100" preview/>
+						<Image :src="support_wechat" alt="微信支付" image-class="w-full sm:w-[20vw]" preview/>
 					</div>
 				</TabPanel>
 
 				<TabPanel value="alipay">
-					<div class="flex justify-center items-center gap-2">
-						<Image :src="support_alipay" alt="支付宝支付" image-class="w-100" preview/>
-						<Image :src="support_alipay_redpacket" alt="支付宝红包" image-class="w-100" preview/>
+					<div class="flex flex-col sm:flex-row justify-center items-center gap-2">
+						<Image :src="support_alipay" alt="支付宝支付" image-class="w-full sm:w-[20vw]" preview/>
+						<Image :src="support_alipay_redpacket" alt="支付宝红包" image-class="w-full sm:w-[20vw]" preview/>
 					</div>
 				</TabPanel>
 			</TabPanels>
