@@ -10,7 +10,7 @@ definePageMeta({
 
 const tab = computed({
 	get: () => {
-		return location.hash.slice(1) ?? 'afdian'
+		return location.hash.slice(1) || 'afdian'
 	},
 
 	set(value) {
