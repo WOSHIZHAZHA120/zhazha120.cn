@@ -61,6 +61,7 @@ export default defineNuxtConfig({
 		'src/layers/furry',
 		'src/layers/accuracy-calculator',
 		'src/layers/blog',
-		'src/layers/birthday'
+		'src/layers/birthday',
+		'src/layers/image-watermark-tool'
 	]
 })

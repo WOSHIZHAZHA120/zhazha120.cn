@@ -57,7 +57,7 @@ const remove = (event: MouseEvent, index: number) => {
 		<ConfirmPopup/>
 
 		<IftaLabel>
-			<InputNumber v-model="passRequirePercentage" :allow-empty="false" :format="false" :max="100" :min="0" :step="1" show-buttons suffix="%"/>
+			<InputText v-model="passRequirePercentage" :allow-empty="false" :format="false" :max="100" :min="0" :step="1" show-buttons suffix="%"/>
 			<label>过段要求</label>
 		</IftaLabel>
 

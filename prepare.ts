@@ -36,6 +36,11 @@ import { exec } from 'node:child_process'
 			exec(`nuxt prepare --cwd=src/layers/blog`, () => {
 				resolve()
 			})
+		}),
+		new Promise<void>(resolve => {
+			exec(`nuxt prepare --cwd=src/layers/image-watermark-tool`, () => {
+				resolve()
+			})
 		})
 	])
 })()
